@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <!--<meta name="viewport" content="width=640,user-scalable=no, target-densitydpi=device-dpi" />-->
+    <meta content="target-densitydpi=device-dpi, width=device-width, initial-scale=0.5, user-scalable=no" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>i8微站</title>
+    <link rel="stylesheet" type="text/css" href="css/aboutus.css">
+    <script src="js/zepto.js"></script>
+</head>
+
+<body>
+    <img id="egg" class="active" src="image/egg.png" />
+    <img id="logo" src="image/i8logo.png" />
+    <img id="bg2" src="image/bg2.jpg" />
+    <img id="back" src="image/back.png" />
+    <div id="bg1" style="width:100%"><img src="image/bg1.jpg" style="width:100%" /></div>
+    <script>
+        if (navigator.userAgent.indexOf('MI 2S') < 0) {
+            $('#bg1').replaceWith('<img id="bg1" src="image/bg1.jpg" style="width:100%; position: fixed;" />')
+        }
+        
+    </script>
+    <!--<div id="bg1" style="background: url(image/bg1.jpg) no-repeat center bottom; width: 100%; background-size: 100% auto; height: 7428px;"></div>-->
+    <img class="arrow-down" src="image/arrow.png" />
+    <div id="page1" class="page in">
+        <h1>
+           <img src="image/first.png" />
+            </h1>
+    </div>
+    <div id="page2" class="page">
+        <h1>
+            </h1>
+    </div>
+    <div id="page3" class="page">
+        <h1>
+                <img class="pc" src="image/pc.gif" />
+                <img class="smallcloud1" src="image/smallcloud.png" />
+                <img class="smallcloud2" src="image/smallcloud.png" />
+            </h1>
+    </div>
+    <div id="page4" class="page">
+       <img src="image/mobile.gif" />
+        <!--<h1>
+                <img src="image/mobile.gif" />
+            </h1>-->
+    </div>
+    <div id="page5" class="page">
+        <h1>
+                <img src="image/people.png" />
+                    <div class="triangle-right"></div>
+                    <div class="txt-box"><img src="image/201309.gif"></div>
+            </h1>
+    </div>
+    <div id="page6" class="page">
+        <h1>
+                <img src="image/bigcloud.png" />
+                <div class="txt"></div>
+            </h1>
+    </div>
+    <div id="page7" class="page">
+       <img src="image/balloon.gif" />
+        <h1>
+            </h1>
+    </div>
+    <div id="page8" class="page">
+       <img src="image/201403.gif" />
+        <h1>
+                
+            </h1>
+    </div>
+    <div id="page9" class="page">
+        <h1>
+                <img class="smallcloud1" src="image/smallcloud.png" />
+                <img class="smallcloud2" src="image/smallcloud.png" />
+                <!--<img class="smallballoon" src="image/small-balloon.gif" />-->
+            <div class="txt"></div>
+            </h1>
+    </div>
+    <div id="page10" class="page">
+        <h1>
+                <div class="txt"></div>
+            </h1>
+    </div>
+    <div id="page11" class="page">
+        <h1>
+               <img src="image/largecloud.gif" />
+            </h1>
+    </div>
+    <div id="page12" class="page">
+        <h1>
+               <!--<img src="image/earth.png" />-->
+            </h1>
+    </div>
+    <div id="page13" class="page">
+       
+        <h1>
+               <img src="image/0820.gif" />
+            </h1>
+    </div>
+    <div id="page14" class="page">
+        <img class="stone-left" src="image/stone-left.png" />
+        <img class="stone-right" src="image/stone-right.png" />
+        <h1>
+               <img src="image/20140922.png" />
+            </h1>
+    </div>
+    <div id="page15" class="page">
+        <h1>
+               <img src="image/mars.png" />
+            </h1>
+    </div>
+    <div id="page16" class="page">
+        <h1>
+               <img src="image/1127.png" />
+            </h1>
+    </div>
+    <div id="page17" class="page">
+        <h1>
+               <img src="image/20141205.png" />
+            </h1>
+    </div>
+    <div id="page19" class="page">
+        <img src="image/feiji.gif" />
+    </div>
+    <div id="page18" class="page">
+        <a class="islast" id="islast">已经是最后一页了哦，亲~</a> 
+        <h1>
+               <img src="image/20141215.png" />
+            </h1>
+    </div>
+
+    </div>
+<audio id="mp3" src="music/music.mp3" loop="loop">
+    </audio>
+</body>
+<script>
+    /*$('[src]').each(function(){
+            $(this).attr('src',$(this).data('src'));
+        })*/
+    var pageIndex = 0;
+    var isbreak = false;
+    //蛋蛋
+    var eggTimer = setInterval(function () {
+            $('#egg').toggleClass('active');
+        }, 1200)
+        //地球
+    var earthTimer = null;
+    var earthTimes = 0;
+    //dom
+    var $ship = $('#ship');
+    var $duck = $('#duck');
+    var $page = $('.page');
+    var $body = $('body');
+    //帆船
+    var prop = $(window).width() / 640;
+    var shiptop1 = prop * 824;
+    var shiptop2 = shiptop1 - 7428 * prop * 0.09 + 90;
+    var shiptop3 = shiptop2 - 7428 * prop * 0.09;
+    $ship.css('bottom', shiptop1);
+
+    //小鸭子
+    var ducktop1 = prop * 1410;
+    var ducktop2 = ducktop1 - 7428 * prop * 0.09 + 90;
+    var ducktop3 = ducktop2 - 7428 * prop * 0.09 + 90;
+    var ducktop4 = ducktop3 - 7428 * prop * 0.09 + 90;
+    $ship.css('bottom', shiptop1);
+    //上滑动
+    $body.on('touchstart', function (ev) {
+$('#mp3')[0].play();
+        ev.preventDefault();
+return false;
+    })
+    $body.swipeDown(function (ev) {
+        if (!isbreak) {
+            return false;
+        }
+        if (pageIndex >17) {
+            $('#islast').fadeIn();
+            setTimeout(function () {
+                $('#islast').fadeOut();
+            }, 4000)
+            return false;
+        }
+        pageIndex++;
+        var _top = (pageIndex * 7.8) + '%';
+        var _top2;
+        if (pageIndex > 12) {
+            _top = '100%'
+            _top2 = -(70-(pageIndex-12) * 9) + '%';
+        } else {
+            _top2 = '-70%'
+        }
+        $page.eq(pageIndex - 1).removeClass('in').addClass('up');
+        $page.eq(pageIndex).addClass('in');
+        $page.eq(pageIndex + 1).addClass('load');
+        /*var preload=$page.eq(pageIndex + 1).find('img');
+        preload.each(function(){
+            $(this).attr('src',$(this).data('src'));
+        })*/
+        
+        //单独页面操作
+        switch (pageIndex) {
+        /*case 1:
+            $ship.css('bottom', shiptop2);
+            $duck.css('bottom', ducktop2);
+            break;
+        case 2:
+            $ship.css('bottom', shiptop3);
+            $duck.css('bottom', ducktop3);
+            break;
+        case 3:
+            $duck.css('bottom', ducktop4);
+            break;*/
+        case 11:
+            /*isbreak = false;
+            setTimeout(function () {
+                $('body').css({
+                    'transition': '.3s',
+                    '-webkit-transition': '.3s',
+                });
+                earthTimer = setInterval(function () {
+                    if (earthTimes > 5) {
+                        clearInterval(earthTimer);
+                        earthTimes = 0;
+                        $('body').removeClass('in');
+                        $('body').css({
+                            'transition': '1s',
+                            '-webkit-transition': '1s'
+                        });
+                        isbreak = true;
+                        return;
+                    }
+                    earthTimes++;
+                    $('body').toggleClass('in')
+                }, 200)
+            }, 1000)*/
+            break;
+        case 12:
+            _top = '93%';
+            break;
+        case 18:
+            _top2 = '0%';
+            break;
+        }
+        //$body.css('background-position', 'center ' + _top + ',center ' + _top2 + '');
+        if(pageIndex==13){
+            $('#bg1').css({
+                transform:'translateY('+_top+')',
+                '-webkit-transform':'translateY('+_top+')'
+            })
+            $('#bg2').css({
+                transform:'translateY('+_top2+')',
+                '-webkit-transform':'translateY('+_top2+')'
+            })
+            return;
+        }
+        console.log(pageIndex)
+        if(pageIndex > 12){
+            $('#bg2').css({
+                transform:'translateY('+_top2+')',
+                '-webkit-transform':'translateY('+_top2+')'
+            })
+        }else{
+            $('#bg1').css({
+                transform:'translateY('+_top+')',
+                '-webkit-transform':'translateY('+_top+')'
+            })
+        }
+        event.preventDefault();
+    })
+
+    //下滑动
+    $body.swipeUp(function (ev) {
+        if (!isbreak) {
+            return false;
+        }
+        if (pageIndex <= 0) {
+            return false;
+        }
+        pageIndex--;
+        //var _top = (100 - pageIndex * 9) + '%';
+        var _top = (pageIndex * 7.8) + '%';
+        var _top2;
+        if (pageIndex > 12) {
+            _top = '100%'
+            _top2 = -(70-(pageIndex-10) * 9) + '%';
+        } else {
+            _top2 = '-70%'
+        }
+        $page.eq(pageIndex + 1).removeClass('in');
+        $page.eq(pageIndex).addClass('in').removeClass('up');
+        //单独页面操作
+        switch (pageIndex) {
+        /*case 0:
+            $ship.css('bottom', shiptop1);
+            $duck.css('bottom', '1800px');
+            break;
+        case 1:
+            $ship.css('bottom', shiptop2);
+            $duck.css('bottom', ducktop2);
+            break;
+        case 2:
+            $duck.css('bottom', ducktop3);
+            break;*/
+        case 12:
+            _top = '93%';
+            break;
+        case 18:
+            _top2 = '0%';
+            break;
+
+        }
+        //$body.css('background-position', 'center ' + _top + ',center ' + _top2 + '');
+        if(pageIndex==13){
+            $('#bg1').css({
+                transform:'translateY('+_top+')',
+                '-webkit-transform':'translateY('+_top+')'
+            })
+            $('#bg2').css({
+                transform:'translateY('+_top2+')',
+                '-webkit-transform':'translateY('+_top2+')'
+            })
+            return;
+        }
+        if(pageIndex > 12){
+            $('#bg2').css({
+                transform:'translateY('+_top2+')',
+                '-webkit-transform':'translateY('+_top2+')'
+            })
+        }else{
+            $('#bg1').css({
+                transform:'translateY('+_top+')',
+                '-webkit-transform':'translateY('+_top+')'
+            })
+        }
+
+    })
+
+    $('#egg').tap(function () {
+        $('.page').eq(1).addClass('load');
+        isbreak = true;
+        clearInterval(eggTimer);
+        $('#egg').replaceWith('<img id="egg" src="image/bee.png" style="margin-left:-71px" />')
+        //$(this).attr('src', 'image/bee.png').css('margin-left', '-71px;').removeClass('active');
+    })
+    $('#back').tap(function () {
+        window.location.href = "download.html"
+    })
+
+    
+</script>
+
+</html>

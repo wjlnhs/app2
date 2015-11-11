@@ -1,0 +1,78 @@
+<% if (eduDataResult) { %>
+<%for(var i=0;i<eduData.length;i++){%>
+<div class="cate-body eduitem" cid="<%=eduData[i].ID%>">
+    <div class="gray-yellow l-h50">
+        <span class="m-r50 m-l20 cate-title"><%=: eduData[i].StartTime | dateformat: 'YYYY-MM' %> － <%=: eduData[i].EndTime | dateformat: 'YYYY-MM' %></span>
+        <span class="m-r50 m-l20 cate-title"><%=eduData[i].MainName%></span>
+        <a class="btn-fold rt"></a>
+        <a class="btn-delete edit-icon rt">删除</a>
+        <a class="btn-edit-one rt">编辑</a>
+    </div>
+    <div class="cate-item" style="display: none;">
+        <div class="preview m-l40" >
+            <div class="app-table-list2 bw m-t10">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="black">学校</td>
+                        <td><%=eduData[i].MainName%></td>
+                    </tr>
+                    <tr>
+                        <td class="black w-85">院系</td>
+                        <td><%=eduData[i].Position%></td>
+                    </tr>
+                    <tr>
+                        <td class="black">时间</td>
+                        <td><%=: eduData[i].StartTime | dateformat: 'YYYY-MM' %> - <%=: eduData[i].EndTime | dateformat: 'YYYY-MM' %></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="app-table-list2 b-blue-sty1 bw m-t10 m-l40">
+        <table>
+            <tbody>
+            <tr>
+                <td class="black w-85">学校</td>
+                <td><input class="school" type="text" placeholder="学校名称" value="<%=eduData[i].MainName%>"></td>
+            </tr>
+            <tr>
+                <td class="black">院系</td>
+                <td><input class="position" type="text" placeholder="院系" value="<%=eduData[i].Position%>"></td>
+            </tr>
+            <tr>
+                <td class="black">时间</td>
+                <td>
+                    <div class="in-bl rel selecttime">
+                        <input class="w-363-h36 start-year" defaultVal="<%=: eduData[i].StartTime | dateformat: 'YYYY' %>" value="<%=: eduData[i].StartTime | dateformat: 'YYYY' %>" id="edit_StartTime_year_<%=eduData[i].ID%>" onfocus="WdatePicker({dateFmt:'yyyy'})" type="text" placeholder="2012">
+                        <i class="icon icon_select_gray"></i>
+                    </div>
+                    <div class="in-bl rel selecttime m-r0">
+                        <input class="w-363-h36 start-month"  defaultVal="<%=: eduData[i].StartTime | dateformat: 'MM' %>" value="<%=: eduData[i].StartTime | dateformat: 'MM' %>" id="edit_StartTime_month_<%=eduData[i].ID%>" onfocus="WdatePicker({dateFmt:'MM'})" type="text" placeholder="6">
+                        <i class="icon icon_select_gray"></i>
+                    </div>
+                    <span class="m-r10">----&nbsp;</span>
+                    <div class="in-bl rel selecttime">
+                        <input class="w-363-h36 end-year" defaultVal="<%=: eduData[i].EndTime | dateformat: 'YYYY' %>" value="<%=: eduData[i].EndTime | dateformat: 'YYYY' %>" type="text" onfocus="WdatePicker({dateFmt:'yyyy'})" placeholder="2014">
+                        <i class="icon icon_select_gray"></i>
+                    </div>
+                    <div class="in-bl rel selecttime">
+                        <input class="w-363-h36 end-month" defaultVal="<%=: eduData[i].EndTime | dateformat: 'MM' %>" value="<%=: eduData[i].EndTime | dateformat: 'MM' %>" type="text" onfocus="WdatePicker({dateFmt:'MM'})" placeholder="6">
+                        <i class="icon icon_select_gray"></i>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="sub tcenter m-t15 ">
+            <span class="btn-blue-empty-h32 cancel">&nbsp;取 消&nbsp;</span>
+            <span class="btn-blue-h32 confirm m-l20">&nbsp;确 定&nbsp;</span>
+        </div>
+    </div>
+    </div>
+</div>
+<%} %>
+<%}%>
+<div class="cate-body">
+    <div class="add-edu"><span class="add-item-btn"><i class="icon icon-add"></i>添加教育经历</span></div>
+</div>

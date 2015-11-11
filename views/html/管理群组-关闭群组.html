@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta http-equiv="x-ua-compatible" content="IE=8" >
+    <!--start css-->
+    <link type="text/css" rel="stylesheet" href="../../resource/default/stylesheets/fw.css" />
+    <link type="text/css" rel="stylesheet" href="../../resource/default/stylesheets/app.css" />
+    <link type="text/css" rel="stylesheet" href="home.css" />
+    <!--end css-->
+</head>
+<body>
+<div class="app-header">
+    <div class="app-header-top">
+        <div class="login-info">
+            <a href="javascript:;"></a>
+            您好，欢迎来到i8工作流系统中心！ <a href="/logout" title="退出系统">退出</a>
+        </div>
+    </div>
+    <div class="app-header-main">
+        <a class="app-logo"></a>
+        <ul class="app-mapsite">
+            <li>
+                <a href="###">社区协作</a>
+            </li>
+            <li>
+                <a href="/main" class="current">数据流量</a>
+            </li>
+        </ul>
+        <div class="app-funs">
+            <div class="app_top_search">
+                <span id="js_header_search_btn" class="app_top_search_btn"></span>
+                <input id="js_header_search_txt" class="app_top_search_input" type="text">
+                <span class="app_top_search_mask" >搜索侃侃、动态、同事、文档 <i class="app_top_search_btn"></i></span>
+                <div style="display: none" id="com_top_headdown_tempSuggestBox"></div>
+            </div>
+            <ul class="my-system">
+                <li class="my-info">
+                    <a >&nbsp;</a>
+                    <div class="my-system-menu">
+                        <div class="my-system-posi"></div>
+                        <a><i class="sp-menu-hd1"></i>个人设置</a>
+                        <a><i class="sp-menu-hd3"></i>修改头像</a>
+                        <a><i class="sp-menu-hd3"></i>密码重置</a>
+                        <a><i class="sp-menu-hd4"></i>提醒设置</a>
+                        <a><i class="sp-menu-hd5"></i>退出</a>
+                    </div>
+                </li>
+                <li class="my-message">
+                    <a >&nbsp;</a>
+                    <div class="my-system-menu">
+                        <div class="my-system-posi"></div>
+                        <a><span class="my-tips-num">1</span>人参与新投票</a>
+                        <a><i class="sp-menu-hd6"></i>评论</a>
+                        <a><i class="sp-menu-hd7"></i>@我的</a>
+                        <a><i class="sp-menu-hd8"></i>系统消息</a>
+                    </div>
+                    <div class="system-message-div">
+                        <a><span class="my-tips-num">1</span>人参与新投票</a>
+                        <span class="my-tps-close"></span>
+                    </div>
+                </li>
+                <li class="my-set"><a >&nbsp;</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="app-content-bg bgcolor">
+    <div class="app-content">
+        <div class="ta-home-bg oflow">
+            <img class="pf-img" src="pf.png" width="1200" />
+            <div class="ta-head-bd">
+                <div class="ta-head-bc"></div>
+                <img src="http://hvming.i8xiaoshi.com/ResourceStore/HeadXLarge/c4b2d40b-8c2c-4fa3-95ac-5c48e23d9807.jpg">
+            </div>
+            <div class="ta-home-name heit tcenter">
+                客户反馈群
+                <p class="ta-home-tps">我就是这么拽，我有钱，我任性</p>
+            </div>
+            <div class="ta-home-info" style="width: 540px;">
+                <div class="ta-home-ddd" style="width: 480px;">··································································</div>
+                <div class="ta-home-td lt">
+                    <i class="spbg1 sprite-27" style="margin-left: 28px;" title="成员数"></i>
+                    <p style="text-indent: 30px;">15</p>
+                </div>
+                <div class="ta-home-td lt">
+                    &nbsp;
+                </div>
+                <div class="ta-home-td lt">
+                    <i class="spbg1 sprite-28" style="margin-left: 48px;" title="创建人"></i>
+                    <p style="text-indent: 40px;">丁芝</p>
+                </div>
+                <div class="ta-home-td lt">
+                    &nbsp;
+                </div>
+                <div class="ta-home-td lt">
+                    <i class="spbg1 sprite-29" style="margin-left: 65px;" title="管理员"></i>
+                    <p class="tright">徐伟、王云景</p>
+                </div>
+            </div>
+            <div class="ta-pf-btns">
+                <div class="ta-pf-btn">
+                    <p>上传封面图</p>
+                    <i class=""></i>
+                </div>
+                <div class="ta-pf-btn">
+                    <p style="background: #49C7EA;">邀请成员</p>
+                    <i class="hover-btn2"></i>
+                </div>
+                <div class="ta-pf-btn">
+                    <p style="background: #F8B62F;">关闭该群</p>
+                    <i class="hover-btn3"></i>
+                </div>
+            </div>
+        </div>
+        <div class="app-ta-lt">
+            <div class="ta-home-menu ">
+                <div class="lt w25b">
+                    <span class="ta-tt fz14-weight ">基本信息</span>
+                </div>
+                <div class="lt w25b">
+                    <span class="ta-tt fz14-weight ">成员列表</span>
+                </div>
+                <div class="lt w25b">
+                    <span class="ta-tt fz14-weight">处理群组</span>
+                </div>
+                <div class="lt w25b">
+                    <span class="ta-tt fz14-weight current">关闭群组</span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="igroup-manage">
+                <div class="igroup-close-div tcenter">
+                    <div class="error-icon-bg"></div>
+                    <p class="igroup-close-tps clred">群组关闭后将不显示在系统中，请谨慎操作。</p>
+                    <P>关闭成功后，系统将向所有群成员发送该群关闭的消息提醒。</P>
+                    <span class="igroup-c-btn m-t25 m-b25"><span class="igroup-x">×</span>关闭群组</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="app-footer">
+    <ul class="links-list">
+        <li >
+            <a href="###">联系我们</a><span>|</span>
+        </li>
+        <li >
+            <a href="###">安全隐私</a><span>|</span>
+        </li>
+        <li >
+            <a href="###">合作伙伴</a>
+        </li>
+        <li >
+            <a class="footer-phone"></a>
+        </li>
+        <li >
+            <a class="footer-qq"></a>
+        </li>
+    </ul>
+    <div class="app-copyright">
+        沪ICP备13026113号 Copyright @ 2012-2014 i8xiaoshi
+    </div>
+</div>
+<script  src="../../resource/default/javascripts/common/jquery-1.8.3.min.js"></script>
+<script  src="../../resource/default/javascripts/common/sea.js"></script>
+<script  src="../../resource/default/javascripts/common/i8_global.js"></script>
+<script>
+
+</script>
+</body>
+</html>
+

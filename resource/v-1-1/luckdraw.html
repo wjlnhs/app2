@@ -1,0 +1,126 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, target-densitydpi=device-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="砸蛋">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/recruitment.css">
+    <title>砸蛋</title>
+
+</head>
+<style>
+    body{
+        background: #17a491!important;
+        position: relative;
+    }
+    #red_envelopes_box p{
+        font-size: 26px;
+    color: #e94b30;;
+    }
+    .des{
+        font-size: 30px;
+    color: #fff;
+    letter-spacing: 20px;
+        position: absolute;
+        bottom: 10%;text-align: center;
+    width: 100%;
+        text-indent: 1em;;
+    }
+    #egg{
+        width: 600px;
+        position: absolute;
+        top:50%;
+        margin-top: -350px;
+        margin-left: 75px;;
+    }
+    @-webkit-keyframes egg {
+        0% {
+            transform: rotateZ(0deg);
+            -webkit-transform: rotateZ(0deg);
+        }
+        5% {
+            transform: rotateZ(-10deg);
+            -webkit-transform: rotateZ(-10deg);
+        }
+        10% {
+            transform: rotateZ(10deg);
+            -webkit-transform: rotateZ(10deg);
+        }
+        15% {
+            transform: rotateZ(0deg);
+            -webkit-transform: rotateZ(0deg);
+        }
+        20% {
+            transform: rotateZ(-10deg);
+            -webkit-transform: rotateZ(-10deg);
+        }
+        25% {
+            transform: rotateZ(10deg);
+            -webkit-transform: rotateZ(10deg);
+        }
+        30% {
+            transform: rotateZ(0deg);
+            -webkit-transform: rotateZ(0deg);
+        }
+        35% {
+            transform: rotateZ(-10deg);
+            -webkit-transform: rotateZ(-10deg);
+        }
+        40% {
+            transform: rotateZ(10deg);
+            -webkit-transform: rotateZ(10deg);
+        }
+        45% {
+            transform: rotateZ(0deg);
+            -webkit-transform: rotateZ(0deg);
+        }
+
+        100% {
+            transform: rotateZ(0deg);
+            -webkit-transform: rotateZ(0deg);
+        }
+    }
+    #egg.active {
+        animation: egg 0.8s infinite linear;
+        -webkit-animation: egg 0.8s infinite linear;
+    }
+    #red_envelopes_box input{
+        width: 318px;
+        height: 50px;
+        line-height: 50px;
+        border: none;
+        background-color: #fff;
+        margin-top: 20px;
+        text-indent: 1em;;
+    }
+</style>
+<script>
+    //initial-scale=1.0,
+    var scale=$(window).width()/750;
+    $('#viewport').attr('content','width=device-width, user-scalable=no, initial-scale='+scale+', target-densitydpi=device-dpi')
+</script>
+<body>
+<img id="egg" class="active" src="image/recruitment/egg.png">
+<p class="des">戳我就有机会获得话费哦！</p>
+<div id="red_envelopes_box">
+    <img src="image/recruitment/red-envelopes.png" id="red_envelopes" />
+    <div class="red-envelopes-txt-box">
+        <p>恭喜您抽中<span id="prize">0</span>元手机话费</p>
+        <p>Oh~逆天了，土豪跪求包养~</p>
+        <input placeholder="请输入手机号码" value="" />
+    </div>
+</div>
+<script>
+    function creatpaper(){
+        return ''
+    }
+    $('#egg').on('touchstart',function(){
+        $(this).remove();
+        $('.des').remove();
+        $('#red_envelopes_box').addClass('upin')
+    })
+</script>
+</body>
+</html>

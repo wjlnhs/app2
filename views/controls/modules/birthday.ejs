@@ -1,0 +1,35 @@
+<div class="rt-block" id="birthday">
+    <div class="rt-block-tt heit">
+        <div class="lt"><i></i>生日祝福</div>
+    </div>
+    <div class="rt-block-cont">
+        <div class="rt-birthday">
+            <div id="js_birthday_count" class="rt-birthday-tt">
+                <span class="lt rt-birthday-bg m-r10"></span>
+                近期有 <span class="rt-birthday-c">1</span> 位同事将过生日，
+                我们祝他生日快乐!
+            </div>
+            <ul id="js_birthdays">
+            </ul>
+        </div>
+    </div>
+    <script id="js_birthday_tpl" type="text/html">
+        <li class="rt-birthday-info">
+            <div class="rt-birthday-hd">
+                <img class="my-headimg lt" src="{headimg}">
+                <p><span class="rt-birthday-name">{name}</span>{birthday}</p>
+                <p>{birthday} {xingzuo}</p>
+                <div class="clear"></div>
+            </div>
+            <div class="rt-birthday-tr oflow">
+                <span class="rt-birthday-td zhu-fu m-l10 lt"><i class="spbg1 sprite-53"></i>生日快乐</span>
+                <span class="rt-birthday-td send-gift m-r10 rt"><i class="spbg1 sprite-54"></i>送TA礼物</span>
+                <div class="clear"></div>
+                {imgs}
+            </div>
+        </li>
+    </script>
+    <script>
+        seajs.use('/default/javascripts/modules/birthday.js');
+    </script>
+</div>

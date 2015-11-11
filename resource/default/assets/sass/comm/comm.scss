@@ -1,0 +1,112 @@
+@import "comm-ui.scss";
+$blue: #3bbfce;
+$margin: 198px;
+//@media
+
+$media-stack:
+(group: tablet, id: general, rule: "only screen and (min-device-width: 700px)"),
+(group: small, id: general, rule: "only screen and(min-device-width: 1100px)"),
+(group: small, id: inbetween, rule: "only screen and(min-device-width: 1100px) and (max-device-width: 1400px)"),
+(group: large, id: general, rule: "only screen and(min-device-width: 1400px)"),
+(group: print, id: general, rule: "only print");
+
+@mixin media($group, $id: general){
+  @each $media in $media-stack{
+    @if($group == map-get($media, group) and $id == map-get($media, id)){
+      $rule: map-get($media, rule);
+      @media #{$rule} {@content}
+    }
+  }
+}
+
+//@@media
+//css3 fun
+@mixin prefixer($name,$arg...) {
+  -webkit-#{$name} : $arg;
+  -moz-#{$name} : $arg;
+  -opera-#{$name} : $arg;
+  -ms-#{$name} : $arg;
+  box-shadow:$arg;
+}
+
+@mixin box-shadow($shadow...) {
+  @include prefixer(box-shadow,$shadow)
+}
+
+@mixin animate($animate) {
+  @include prefixer(animate,$shadow)
+}
+
+@mixin opacity($opacity:50) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity=$opacity);
+}
+//css3 fun
+.content-navigation {
+  border-color: $blue;
+  color: darken($blue, 9%);
+  margin:$margin;
+}
+
+@mixin bgSize($bgSize) {
+  background-size:$bgSize ;
+}
+//@include rgba(161, 195, 58, 0.3);
+@mixin rgba($r,$g,$b,$a){
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str(rgba($r,$g,$b,$a))}', endColorstr='#{ie-hex-str(rgba($r,$g,$b,$a))}');
+  background: rgba($r,$g,$b,$a);
+}
+
+//@include sim(in-bl v-t);
+@mixin sim($attributes) {
+
+  @each $attribute in $attributes {
+
+    @if $attribute == in-bl {
+      display: inline-block;
+    }
+    @else if $attribute == v-t {
+      vertical-align: top;
+    }
+    @else if $prefix == ms and $prefix-for-microsoft == true {
+      -ms-#{$property}: $value;
+    }
+    @else if $prefix == o and $prefix-for-opera == true {
+      -o-#{$property}: $value;
+    }
+    @else if $prefix == spec and $prefix-for-spec == true {
+      #{$property}: $value;
+    }
+    @else {
+      @warn "Unrecognized prefix: #{$prefix}";
+    }
+  }
+}
+//
+// triangle
+@mixin triangle($direction, $size, $borderColor ) {
+  content:"";
+  height: 0;
+  width: 0;
+
+  @if $direction == top {
+    border-bottom:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;
+  }
+  @else if $direction == right {
+    border-left:$size solid $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;
+  }
+  @else if $direction == bottom {
+    border-top:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;
+  }
+  @else if $direction == left {
+    border-right:$size solid $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;
+  }
+}

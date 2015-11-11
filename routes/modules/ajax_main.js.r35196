@@ -1,0 +1,95 @@
+/**
+ * Created by jialin on 2014/12/9.
+ */
+var express = require('express');
+var router = express.Router();
+var reqcom = require('../../lib/reqcommon');
+var blockModules = require('../../business/app/modules.js');
+var _checkData = require('../../lib/checkData.js');
+
+//获取新员工
+router.get('/members', function(req, res) {
+    var _subdomain = reqcom.getSubdomain(req);
+    var _aid = req.i8session.aid;
+    var topn = req.param('topn');
+    if(topn){
+        topn = 10;
+    }
+    blockModules.getNewMembers(_subdomain, _aid, topn,function(data){
+        res.send(JSON.stringify(_checkData.Check(data)));
+    });
+});
+//获取应用列表
+router.get('/apps', function(req, res) {
+    blockModules.getApps(req,function(data){
+        res.send(JSON.stringify(_checkData.Check(data)));
+    });
+});
+//常用链接
+router.get('/links', function(req, res) {
+    var fn = req.param("fn");
+    switch(fn){
+        case 'byuid':
+            blockModules.getLinks(req,function(data){
+                res.send(JSON.stringify(_checkData.Check(data)));
+            });
+            break;
+        case 'all':
+            blockModules.getLinks(req,function(data){
+                res.send(JSON.stringify(_checkData.Check(data)));
+            });
+            break;
+        case 'update':
+            blockModules.updateSet(req,function(data){
+                res.send(JSON.stringify(_checkData.Check(data)));
+            });
+            break;
+        default:;
+            break;
+    }
+});
+//生日祝福
+router.get('/birthday', function(req, res) {
+    var fn = req.param("fn");
+    var _subdomain = reqcom.getSubdomain(req);
+    var _aid = req.i8session.aid;
+    var topn = req.param("topn");
+    if(topn){
+        topn = 10;
+    }
+    switch(fn){
+        case 'getlist':
+            blockModules.getBirthday(_subdomain,_aid, topn ,function(data){
+                res.send(JSON.stringify(_checkData.Check(data)));
+            });
+            break;
+        default:;
+            break;
+    }
+});
+//热门话题
+router.get('/topic', function(req, res) {
+    var _subdomain = reqcom.getSubdomain(req);
+    var _aid = req.i8session.aid;
+    var topn = req.param('topn');
+    if(topn){
+        topn = 10;
+    }
+    blockModules.getHotTopic(_subdomain, _aid, topn,function(data){
+        res.send(JSON.stringify(_checkData.Check(data)));
+    });
+});
+//i8小时社区
+router.get('/bbs', function(req, res) {
+    blockModules.getBBs(req,function(data){
+        res.send(JSON.stringify(_checkData.Check(data)));
+    });
+});
+//i8小时社区
+router.get('/update-set', function(req, res) {
+    var _subdomain = reqcom.getSubdomain(req);
+    blockModules.updateModues(_subdomain, req, function(data){
+        res.send(JSON.stringify(_checkData.Check(data)));
+    });
+});
+module.exports=router;

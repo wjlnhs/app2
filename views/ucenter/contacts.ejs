@@ -1,0 +1,153 @@
+<%-contentFor('headerContent')%>
+<link type="text/css" rel="stylesheet" href="<%-locals.userBaseInfo.resHost%>default/stylesheets/home.css"/>
+<link type="text/css" href="<%-locals.userBaseInfo.resHost%>default/stylesheets/personal_info.css" rel="stylesheet" />
+<link type="text/css" href="<%-locals.userBaseInfo.resHost%>default/stylesheets/mail-list-bgcolor.css" rel="stylesheet" />
+<script type="text/javascript" src="<%-locals.userBaseInfo.resHost%>default/javascripts/common/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="<%-locals.userBaseInfo.resHost%>default/javascripts/common/sea.js"></script>
+<link type="text/css" rel="stylesheet" href="/default/stylesheets/communityPlugin.css"/>
+<%-contentFor('centerContent')%>
+<div class="lt-bgcolor"></div>
+<div class="app-content">
+    <div class="app-lt lt">
+        <% include ../controls/modules/homeleft.ejs %>
+    </div>
+    <div class="app-right">
+        <div class="maillist-nav">
+            <ul class="nav1">
+                <li class="li-nav1"><a>公共通讯录</a></li>
+                <li class="li-nav2">
+                    <a>员工通讯录<i class="icon icon-up2 m-l20"></i></a>
+                </li>
+            </ul>
+            <ul class="nav2">
+                <li><i class="add"></i>产品部1</li>
+                <li><i class="add"></i>产品部2</li>
+                <li><i class="add"></i>产品部3</li>
+                <li><i class="add"></i>产品部4</li>
+                <li><i class="end"></i>产品部5</li>
+            </ul>
+        </div>
+
+        <div class="maillist app-table-list2 bw">
+            <div class=" h-40 rel">
+            <span class="in-bl m-t10">
+                共计<span class="red">49</span>人
+            </span>
+                <span class="design-bg-icons3 app-checkbox checked v--4 m-r10 onlyshowalways"></span>只显示常用联系人
+                <div class="abs nav-search-box">
+                    <input type="text" placeholder="搜索姓名、手机、座机、邮箱、职位" />
+                    <i class="icon icon-search-gray abs"></i>
+                    <div class="search-border"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <table>
+                <thead>
+                <tr>
+                    <td>姓名</td>
+                    <td>部门（职位）</td>
+                    <td>手机</td>
+                    <td>座机</td>
+                    <td>常用</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <img class="lt" src="../../images/community/user-photo.png"/>
+                        <div class="lt m-l15">
+                            <div class="ft14 bold m-t10">爱因斯坦</div>
+                            <div class="m-t10 ft14">jinshuangling@i8xiaoshi.net</div>
+                        </div>
+                    </td>
+                    <td>产品部 | UI设计师</td>
+                    <td>13816148370</td>
+                    <td>0730-3204718</td>
+                    <td><i class="icon icon-love-empty"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="lt" src="../../images/community/user-photo.png"/>
+                        <div class="lt m-l15">
+                            <div class="ft14 bold m-t10">爱因斯坦</div>
+                            <div class="m-t10 ft14">jinshuangling@i8xiaoshi.net</div>
+                        </div>
+                    </td>
+                    <td>产品部 | UI设计师</td>
+                    <td>13816148370</td>
+                    <td>0730-3204718</td>
+                    <td><i class="icon icon-love"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="lt" src="../../images/community/user-photo.png"/>
+                        <div class="lt m-l15">
+                            <div class="ft14 bold m-t10">爱因斯坦</div>
+                            <div class="m-t10 ft14">jinshuangling@i8xiaoshi.net</div>
+                        </div>
+                    </td>
+                    <td>产品部 | UI设计师</td>
+                    <td>13816148370</td>
+                    <td>0730-3204718</td>
+                    <td><i class="icon icon-love"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="lt" src="../../images/community/user-photo.png"/>
+                        <div class="lt m-l15">
+                            <div class="ft14 bold m-t10">爱因斯坦</div>
+                            <div class="m-t10 ft14">jinshuangling@i8xiaoshi.net</div>
+                        </div>
+                    </td>
+                    <td>产品部 | UI设计师</td>
+                    <td>13816148370</td>
+                    <td>0730-3204718</td>
+                    <td><i class="icon icon-love"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="lt" src="../../images/community/user-photo.png"/>
+                        <div class="lt m-l15">
+                            <div class="ft14 bold m-t10">爱因斯坦</div>
+                            <div class="m-t10 ft14">jinshuangling@i8xiaoshi.net</div>
+                        </div>
+                    </td>
+                    <td>产品部 | UI设计师</td>
+                    <td>13816148370</td>
+                    <td>0730-3204718</td>
+                    <td><i class="icon icon-love"></i></td>
+                <tr>
+                    <td>
+                        <img class="lt" src="../../images/community/user-photo.png"/>
+                        <div class="lt m-l15">
+                            <div class="ft14 bold m-t10">爱因斯坦</div>
+                            <div class="m-t10 ft14">jinshuangling@i8xiaoshi.net</div>
+                        </div>
+                    </td>
+                    <td>产品部 | UI设计师</td>
+                    <td>13816148370</td>
+                    <td>0730-3204718</td>
+                    <td><i class="icon icon-love"></i></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="lt" src="../../images/community/user-photo.png"/>
+                        <div class="lt m-l15">
+                            <div class="ft14 bold m-t10">爱因斯坦</div>
+                            <div class="m-t10 ft14">jinshuangling@i8xiaoshi.net</div>
+                        </div>
+                    </td>
+                    <td>产品部 | UI设计师</td>
+                    <td>13816148370</td>
+                    <td>0730-3204718</td>
+                    <td><i class="icon icon-love"></i></td>
+                </tr>
+                </tr>
+                </tbody>
+            </table>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<%-contentFor('footerContent')%>
+<% include ../controls/modules/modules-set.ejs %>

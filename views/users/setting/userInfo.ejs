@@ -1,0 +1,104 @@
+<%-contentFor('headerContent')%>
+<link type="text/css" rel="stylesheet" href="<%-locals.userBaseInfo.resHost%>default/stylesheets/personal_info.css" />
+    <style>
+        .personal-info>.cate-row>a, .personal-info>.cate-row>.cate-body{
+            display: none;
+        }
+    </style>
+
+<%-contentFor('centerContent')%>
+<div class="app-content-bg-left"></div>
+<div class="app-content-bg-right"></div>
+<div class="app-content">
+    <% include ./leftMenu.ejs %>
+    <div class="app-right">
+            <div class="personal-info i8-form">
+                <div class="cate-row b-gray-sty1 mail">
+                    <div class="cate-title lt"><i class="icon icon-mail m-r20 m-t10"></i>邮件账号</div>
+                    <div class="editing">
+                        <span class="intro" id="mail_title"></span>
+                        <a class="edit">&nbsp;<i class="icon icon-edit"></i>编 辑</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="cate-row b-gray-sty1 mobile">
+                    <div class="cate-title lt"><i class="icon icon-mobile m-r20 m-t10"></i>手机账号</div>
+                    <div class="editing">
+                        <span class="intro"></span>
+                        <a class="edit">&nbsp;<i class="icon icon-edit"></i>编 辑</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="cate-row b-gray-sty1 personaldata">
+                    <div class="cate-title lt"><i class="icon icon-data m-r20 m-t5"></i>个人资料</div>
+                    <div class="editing">
+                        <span class="intro">这个家伙很懒~</span>
+                        <a class="edit">&nbsp;<i class="icon icon-edit"></i>编 辑</a>
+                    </div>
+                    <a class="rt m-t5 retract">&nbsp;<i class="icon icon-up"></i>收起</a>
+                    <div class="clear"></div>
+                    <% include ./userInfo/personaldata.ejs %>
+                </div>
+                <div class="cate-row b-gray-sty1 personaltag">
+                    <div class="cate-title lt"><i class="icon icon-tile m-r20 m-t5"></i>个人标签</div>
+                    <div class="editing">
+                        <span class="intro">
+                            <% for(var i=0;i<Person.Labels.length;i++){ %>
+                            <span class="tile-nor"><%= Person.Labels[i] %></span>
+                            <% } %>
+                        </span>
+                        <a class="edit">&nbsp;<i class="icon icon-edit"></i>编 辑</a>
+                    </div>
+                    <a class="rt m-t5 retract">&nbsp;<i class="icon icon-up"></i>收起</a>
+                    <div class="clear"></div>
+                    <div class="cate-body">
+                        <div class="b-blue-sty1 m-l40">
+                            <div class="cate-row m-b15" id="mytag">
+                                <input class="w-365 lt m-r10" id="newTagInput" type="text" placeholder="请输入新标签" />
+                                <% for(var i=0;i<Person.Labels.length;i++){ %>
+                                    <span class="tile-nor"><%= Person.Labels[i] %><i class="icon"></i></span>
+                                <% } %>
+
+                            </div>
+                            <div class="clear"></div>
+                            <div class="cate-row m-b15 m-t20">
+                                <div class="black lt w-120 m-r20 m-t3 l-h30">你可能感兴趣的标签：</div>
+                                <span class="tile-add">摄影技巧<i class="icon"></i></span>
+                                <span class="tile-add active">摄影技巧<i class="icon"></i></span>
+                                <span class="tile-add">摄影技巧<i class="icon"></i></span>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="sub tcenter m-t15 ">
+                                <span class="btn-blue-empty-h32 cancel">&nbsp;取 消&nbsp;</span>
+                                <span class="btn-blue-h32 confirm m-l20">&nbsp;确 定&nbsp;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cate-row b-gray-sty1 job-info">
+                    <div class="cate-title lt"><i class="icon icon-job m-r20 m-t5"></i>工作信息</div>
+                    <div class="editing">
+                        <span class="intro">这个家伙很懒~</span>
+                        <a class="edit">&nbsp;<i class="icon icon-edit"></i>编 辑</a>
+                    </div>
+                    <a class="rt m-t5 retract">&nbsp;<i class="icon icon-up"></i>收起</a>
+                    <div class="clear"></div>
+                    <% include ./userInfo/jobInfo.ejs %>
+                </div>
+                <div class="cate-row b-gray-sty1 edu-info">
+                    <div class="cate-title lt"><i class="icon icon-edu m-r20 m-t5"></i>教育信息</div>
+                    <div class="editing">
+                        <span class="intro">这个家伙很懒~</span>
+                        <a class="edit">&nbsp;<i class="icon icon-edit"></i>编 辑</a>
+                    </div>
+                    <a class="rt m-t5 retract">&nbsp;<i class="icon icon-up"></i>收起</a>
+                    <div class="clear"></div>
+                    <% include ./userInfo/eduInfo.ejs %>
+                </div>
+            </div>
+    </div>
+</div>
+<%-contentFor('footerContent')%>
+<script>
+    seajs.use('<%-locals.userBaseInfo.resHost%>default/javascripts/users/settings/userInfo');
+</script>

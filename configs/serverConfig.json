@@ -1,0 +1,15 @@
+{
+    "remoteIp":"192.168.93.251",
+    "redisHost":"192.168.93.252",
+    "redisPort":"6379",
+    "serPorts":{
+        "CPEC.AccountCenterService":"8881",
+        "CPEC.UserCenterService":"8885",
+        "CPEC.BasicService":"8883",
+        "CPEC.TemplateService":"8887",
+        "CPEC.Center.Service":"10001",
+        "CPEC.Platform.Service":"10002",
+        "CPEC.Apps.Service":"10008"
+    },
+    "cookiesDomain":{"status":"on","value":"i8s.cn"}
+}

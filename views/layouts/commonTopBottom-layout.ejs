@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><%=title%></title>
+    <!--start css-->
+    <link type="text/css" rel="stylesheet" href="<%-locals.userBaseInfo.resHost%>default/stylesheets/fw.css" />
+    <link type="text/css" rel="stylesheet" href="<%-locals.userBaseInfo.resHost%>default/stylesheets/app.css" />
+    <!--end css-->
+    <%-defineContent('headerContent')%>
+    <script type="text/javascript">
+        var cpec_session=<%-:locals.userBaseInfo|globalConfig %>;
+    </script>
+</head>
+<body>
+<div class="app-header">
+    <div class="app-header-top">
+        <div class="login-info">
+            <%if(locals.userBaseInfo.uname){%>
+            <a href="javascript:;"><%=locals.userBaseInfo.uname%></a>
+            您好，欢迎来到i8社区中心！ <a href="/logout" title="退出系统">退出</a>
+            <%}else{%>
+            您好，欢迎来到i8社区中心！ <a href="/">请登录</a>
+            <%}%>
+        </div>
+    </div>
+    <div class="app-header-main">
+        <div class="app-cp-logo">
+            <a href="/home"><img src="/default/images/logo.png" alt=""/></a>
+        </div>
+        <div class="app-funs">
+            <div class="app_top_search">
+                <div id="global_search_box" class="abs global-search-box search-box">
+                    <input type="text" placeholder="搜索姓名、手机、座机、邮箱、职位">
+                    <i class="icon icon-search-gray abs"></i>
+                    <div class="search-border"></div>
+                    <div class="com_top_suggestBox">
+                    </div>
+                </div>
+                <div style="display: none" id="com_top_headdown_tempSuggestBox"></div>
+            </div>
+            <ul class="my-system">
+                <li class="my-info">
+                    <a >&nbsp;</a>
+                    <div class="my-system-menu">
+                        <div class="my-system-posi"></div>
+                        <a href="/users/settings/info"><i class="sp-menu-hd1"></i>个人设置</a>
+                        <a href="/users/settings/header"><i class="sp-menu-hd3"></i>修改头像</a>
+                        <a href="/users/settings/pwdreset"><i class="sp-menu-hd3"></i>密码重置</a>
+                        <a href="/users/settings/tips"><i class="sp-menu-hd4"></i>提醒设置</a>
+                        <a><i class="sp-menu-hd5"></i>退出</a>
+                    </div>
+                </li>
+                <li class="my-message">
+                    <a >&nbsp;</a>
+                    <div class="my-system-menu">
+                        <div class="my-system-posi"></div>
+                        <a><span class="my-tips-num">1</span>人参与新投票</a>
+                        <a><i class="sp-menu-hd6"></i>评论</a>
+                        <a><i class="sp-menu-hd7"></i>@我的</a>
+                        <a><i class="sp-menu-hd8"></i>系统消息</a>
+                    </div>
+                    <div class="system-message-div">
+                        <a><span class="my-tips-num">1</span>人参与新投票</a>
+                        <span class="my-tps-close"></span>
+                    </div>
+                </li>
+                <li class="my-set"><a >&nbsp;</a></li>
+            </ul>
+        </div>
+        <ul class="app-mapsite fz14-weight">
+            <li>
+                <a href="###"  class="current">社区协作</a>
+            </li>
+            <li>
+                <a href="/main">数据流量</a>
+            </li>
+            <li>
+                <a href="/main">公告</a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+<div class="app-content-bg">
+   <%-defineContent('centerContent')%>
+</div>
+<div class="app-footer">
+    <ul class="links-list">
+        <li >
+            <a href="###">联系我们</a><span>|</span>
+        </li>
+        <li >
+            <a href="###">安全隐私</a><span>|</span>
+        </li>
+        <li >
+            <a href="###">合作伙伴</a>
+        </li>
+        <li >
+            <a class="footer-phone"></a>
+        </li>
+        <li >
+            <a class="footer-qq"></a>
+        </li>
+    </ul>
+    <div class="app-copyright">
+        沪ICP备13026113号 Copyright &reg; 2012-2014 i8xiaoshi
+    </div>
+</div>
+<script  src="<%-locals.userBaseInfo.resHost%>default/javascripts/common/jquery-1.8.3.min.js"></script>
+<script  src="<%-locals.userBaseInfo.resHost%>default/javascripts/common/sea.js"></script>
+<script>
+    seajs.use('<%-locals.userBaseInfo.resHost%>default/javascripts/ucenter/global');
+</script>
+<%-defineContent('footerContent')%>
+</body>
+</html>
+

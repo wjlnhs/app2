@@ -1,0 +1,33 @@
+.content-navigation {
+  border-color: #3bbfce;
+  color: #2ca2af;
+  margin: 198px; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  background: red; }
+
+body {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4DA1C33A', endColorstr='#4DA1C33A');
+  background: rgba(161, 195, 58, 0.3);
+  height: 600px; }
+
+.content-navigation {
+  border-color: #3bbfce;
+  color: #2ca2af;
+  margin: 55px; }
+
+#page1 {
+  background-size: 452px 755px; }
+
+.begin .page-btn {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 650px;
+  margin-left: 120px; }
+
+/*# sourceMappingURL=style.css.map */

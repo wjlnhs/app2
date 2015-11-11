@@ -1,0 +1,86 @@
+<%-contentFor('headerContent')%>
+<link type="text/css" rel="stylesheet" href="<%-locals.userBaseInfo.resHost%>default/stylesheets/personal_info.css" />
+<%-contentFor('centerContent')%>
+<div class="app-content-bg-left"></div>
+<div class="app-content-bg-right"></div>
+<div class="app-content">
+    <% include ./leftMenu.ejs %>
+    <div class="app-right">
+        <div class="reminding-setting rel">
+            <div class="abs t5 r15">
+                <div class="cate-title prompt-sketch">提醒示意</div>
+                <img class="m-t20 clear" src="/default/images/community/prompt_sketch.png" />
+            </div>
+            <div class="tip cate-row">
+                <div class="cate-title">1.提醒小贴士</div>
+                <% if(Result){ %>
+                <% for(var i=0;i<data.appConfig.length;i++){ %>
+                    <div class="cate-line m-t30">
+                        <span class="design-bg-icons3 app-checkbox <%if(!data.appConfig[i].TValue){%>checked<%}%> v--4"></span>
+                        <span class="black cate"><%= data.appConfig[i].App.Name%></span>
+                        <span class="gray desc"><%= data.appConfig[i].App.TipsNote%></span>
+                    </div>
+                <%}%>
+                <%}%>
+            </div>
+            <div class="mail-prompt cate-row">
+                <div class="cate-title">2.即时邮件提醒<span class="prompt">(提示:当以下事件发生时,立即发送邮件提醒)</span></div>
+                <%if(data.RemindMailSet.length){
+                    for (var s = 0; s < data.RemindMailSet.length; s++) {%>
+                    <div class="cate-line lt m-t25">
+                        <span id="<%= data.RemindMailSet[s].Key%>_<%= data.Account.ID%>" class="design-bg-icons3 app-checkbox v--4"></span>
+                        <span class="black cate">日程开始提醒</span>
+                    </div>
+                    <%}
+                }else{%>
+                    <div class="cate-line lt m-t25">
+                        <span class="design-bg-icons3 app-checkbox v--4 checked" keys="RemindMail_Schedule"></span>
+                        <span class="black cate">日程开始提醒</span>
+                    </div>
+                    <div class="cate-line lt m-t25">
+                        <span class="design-bg-icons3 app-checkbox checked v--4" keys="RemindMail_Workflow"></span>
+                        <span class="black cate">待审批流程</span>
+                    </div>
+                    <div class="cate-line lt m-t25">
+                        <span class="design-bg-icons3 app-checkbox checked v--4" keys="RemindMail_OverWorkflow"></span>
+                        <span class="black cate">审批通过流程</span>
+                    </div>
+                    <div class="cate-line lt m-t25">
+                        <span class="design-bg-icons3 app-checkbox checked v--4" keys="RemindMail_ReturnWorkflow"></span>
+                        <span class="black cate">退回流程</span>
+                    </div>
+                <%}%>
+
+            </div>
+            <div class="clear"></div>
+            <div class="unread-prompt cate-row clear">
+                <div class="cate-title">3.未读小贴士邮件提醒<span class="prompt">(提示:只有在您勾选过的内容有更新才会发邮件给您)</span></div>
+                <div class="cate-line lt m-t25">
+                    <span class="design-bg-icons3 app-radio checked v--7"></span>
+                    <span class="black cate">每天提醒我一次</span>
+                </div>
+                <div class="cate-line lt m-t25">
+                    <span class="design-bg-icons3 app-radio v--7"></span>
+                    <span class="black cate">每周提醒我一次</span>
+                </div>
+                <div class="cate-line lt m-t25">
+                    <span class="design-bg-icons3 app-radio  v--7"></span>
+                    <span class="black cate">每月提醒我一次</span>
+                </div>
+                <div class="cate-line lt m-t25">
+                    <span class="design-bg-icons3 app-radio  v--7"></span>
+                    <span class="black cate">从不提醒我</span>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="sub">
+                <span class="btn-yellow-h32">恢复默认设置</span>
+                <span class="btn-blue-h32  m-l20">保存</span>
+            </div>
+        </div>
+    </div>
+</div>
+<%-contentFor('footerContent')%>
+<script>
+    seajs.use('<%-locals.userBaseInfo.resHost%>default/javascripts/users/settings/userTips');
+</script>

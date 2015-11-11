@@ -1,0 +1,29 @@
+<div class="rt-block" id="members">
+    <div class="rt-block-tt heit">
+        <div class="lt"><i></i>新员工风采</div>
+        <div id="js_members_page" class="rt m-t5 hide">
+            <span id="js_members_prev" class="spbg1 sprite-93 disabled"></span><span id="js_members_next" class="spbg1 sprite-94"></span>
+        </div>
+    </div>
+    <div class="rt-block-cont">
+        <ul id="js-members-list" class="">
+            <div class="block-no-ld">加载中...</div>
+        </ul>
+    </div>
+    <script id="js-members-tpl" type="text/html">
+        <li class="rt-new-people">
+            <div class="rt-birthday-hd">
+                <img class="my-headimg lt" src="{headimg}">
+                <p><span class="rt-birthday-name">{name}</span>{birthday}</p>
+                <p>{datetime}入职</p>
+                <div class="clear"></div>
+            </div>
+            <div class="new-people-info">
+                {perinfo}
+            </div>
+        </li>
+    </script>
+    <script>
+        seajs.use("/default/javascripts/modules/members.js");
+    </script>
+</div>

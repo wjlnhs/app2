@@ -1,0 +1,66 @@
+<%-contentFor('headerContent')%>
+<link type="text/css" rel="stylesheet" href="<%-locals.userBaseInfo.resHost%>default/stylesheets/personal_info.css" />
+<%-contentFor('centerContent')%>
+<div class="app-content-bg-left"></div>
+<div class="app-content-bg-right"></div>
+<div class="app-content">
+    <% include ./leftMenu.ejs %>
+    <div class="app-right">
+        <div class="cate-row i8-form m-b15 changepsw">
+            <table class="com_center_mc_content_up_password">
+                <tbody><tr>
+                    <td class="com_center_mc_content_left">
+                        当前密码:
+                    </td>
+                    <td class="com_center_mc_content_right">
+                        <div><input type="password" id="txt_pwd_now"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="com_center_mc_content_left">
+                        新密码:
+                    </td>
+                    <td class="com_center_mc_content_right">
+                        <div>
+                            <input type="password" data-options="{&quot;strmatch&quot;:&quot;password&quot;,&quot;strfocus&quot;:&quot;密码由8~20个字符组成，区分大小写且不能有空格&quot;,&quot;strerror&quot;:&quot;密码长度为8-20个字符，且不能包含空格&quot;}" id="txt_pwd_new">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="com_center_mc_content_left">
+                        密码强度:
+                    </td>
+                    <td class="com_center_mc_content_right">
+                        <div class="cate-row i8-form h-40">
+                            <div class="lev-box">
+                                <span id="strength_L" class="lev-span" style="background: rgb(128, 128, 128);"></span>
+                                <span id="strength_M" class="lev-span" style="background: rgb(128, 128, 128);"></span>
+                                <span id="strength_H" class="lev-span" style="background: rgb(128, 128, 128);"></span>
+                                <span id="password_tips"></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="com_center_mc_content_left">
+                        确认新密码:
+                    </td>
+                    <td class="com_center_mc_content_right">
+                        <div>
+                            <input type="password" id="txt_pwd_rep" data-options="{&quot;strmatch&quot;:&quot;[\\s|\\S]*&quot;,&quot;strfocus&quot;:&quot; &quot;,&quot;strerror&quot;:&quot;两次密码不一致&quot;,&quot;callback&quot;:&quot;getreturn&quot;,&quot;isNull&quot;:true}">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="com_center_mc_content_center">
+                        <span id="save_pwd" class="com_center_mc_green_bg com_center_mc_mycenter_btn btn-blue-h32">&nbsp;&nbsp;保 存&nbsp;&nbsp;</span>
+                    </td>
+                </tr>
+                </tbody></table>
+        </div>
+    </div>
+</div>
+<%-contentFor('footerContent')%>
+<script>
+    seajs.use('<%-locals.userBaseInfo.resHost%>default/javascripts/users/settings/pwdreset');
+</script>

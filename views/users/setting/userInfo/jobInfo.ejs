@@ -1,0 +1,73 @@
+<% if (jobDataResult) { %>
+<%for(var i=0;i<jobData.length;i++){%>
+<div class="cate-body jobitem" cid="<%=jobData[i].ID%>">
+    <div class="gray-yellow l-h50">
+        <span class="m-r50 m-l20 cate-title"><%=: jobData[i].StartTime | dateformat: 'YYYY-MM' %> － <%=: jobData[i].EndTime | dateformat: 'YYYY-MM' %></span>
+        <span class="m-r50 m-l20 cate-title"><%=jobData[i].MainName%></span>
+        <a class="btn-fold rt"></a>
+        <a class="btn-delete edit-icon rt">删除</a>
+        <a class="btn-edit-one rt">编辑</a>
+    </div>
+    <div class="cate-item" style="display: none;">
+        <div class="preview m-l40">
+            <div class="app-table-list2 bw m-t10">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="black w-85">公司</td>
+                        <td><%=jobData[i].MainName%></td>
+                    </tr>
+                    <tr>
+                        <td class="black">地区</td>
+                        <td class="citytxt">上海，浦东新区</td>
+                    </tr>
+                    <tr>
+                        <td class="black">时间</td>
+                        <td><%=: jobData[i].StartTime | dateformat: 'YYYY-MM-DD' %> - <%=: jobData[i].EndTime | dateformat: 'YYYY-MM-DD' %></td>
+                    </tr>
+                    <tr>
+                        <td class="black">职位</td>
+                        <td><%=jobData[i].Position%></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="app-table-list2 b-blue-sty1 bw m-t10 m-l40">
+        <table>
+            <tbody>
+            <tr>
+                <td class="black w-85">公司</td>
+                <td><input class="company"  i8formtype="required" placeholder="公司名称" type="text" defaultVal="<%=jobData[i].MainName%>" value="<%=jobData[i].MainName%>"></td>
+            </tr>
+            <tr>
+                <td class="black">地区</td>
+                <td><div class="city-group" lev2code="<%= jobData[i].Location%>" defaultlev2code="<%= jobData[i].Location%>"><input class="citylev1" defaultVal="" placeholder="-请选择-" type="text" value=""><input class="citylev2" placeholder="-请选择-" type="text" value=""></div></td>
+            </tr>
+            <tr>
+                <td class="black">时间</td>
+                <td class="job-time">
+                    <div>
+                        <input class="startTime" defaultVal="<%=: jobData[i].StartTime | dateformat: 'YYYY-MM-DD' %>" value="<%=: jobData[i].StartTime | dateformat: 'YYYY-MM-DD' %>" id="edit_StartTime_<%=jobData[i].ID%>" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'edit_EndTime_<%=jobData[i].ID%>\')}'})" type="text" placeholder="<%=Today%>">
+                        <input class="endTime" defaultVal="<%=: jobData[i].EndTime | dateformat: 'YYYY-MM-DD' %>" value="<%=: jobData[i].EndTime | dateformat: 'YYYY-MM-DD' %>" id="edit_EndTime_<%=jobData[i].ID%>" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'edit_StartTime_<%=jobData[i].ID%>\')}'})" type="text" placeholder="<%=Today%>">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="black">职位</td>
+                <td><input class="position" type="text" defaultVal="<%=jobData[i].Position%>" placeholder="职位" value="<%=jobData[i].Position%>"></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="sub tcenter m-t15 ">
+            <span class="btn-blue-empty-h32 cancel">&nbsp;取 消&nbsp;</span>
+            <span class="btn-blue-h32 confirm m-l20">&nbsp;确 定&nbsp;</span>
+        </div>
+    </div>
+    </div>
+</div>
+<% } %>
+<%}%>
+<div class="cate-body add-job-box">
+    <div class="add-job"><span class="add-item-btn"><i class="icon icon-add"></i>添加工作经历</span></div>
+</div>

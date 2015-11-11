@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+    <meta content="telephone=no" name="format-detection">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <link rel="stylesheet" type="text/css" href="css/i8ui.css">
+    <script src="js/zepto.js"></script>
+    <title>i8招聘提交</title>
+
+</head>
+<script>
+    function resizeFont() {
+        $('html').css('font-size', 100 * ($(window).width() / 414) + 'px');
+    }
+</script>
+
+<body>
+    <img onload="resizeFont()" id="page8-title" src="image/recruitment/page8-title.png" />
+    <div id="rule">
+        <img src="image/recruitment/rule-bg.png" id="rule_bg" />
+        <div class="rule-txt-box">
+            <div class="rule-txt">
+                <p>1 转到朋友圈即可抽奖，hei！你抽我抽全都抽哎~</p>
+                <p>2 最高奖励100元话费，拼的就是手气！</p>
+                <p>3 被幸运砸中的小伙伴，留个电话呗(羞射)~</p>
+                <p>4 我们将在节后为您发送奖励，祝过个好年！！！</p>
+            </div>
+        </div>
+    </div>
+    <div id="page8" class="page mypage">
+        <input type="text" placeholder="姓名" />
+        <input type="text" placeholder="应聘职位" />
+        <input type="text" placeholder="期望薪资" />
+        <input type="text" placeholder="手机号码" />
+        <input type="text" placeholder="邮箱" />
+        <button class="btn sub" href="#">提交信息</button>
+    </div>
+    <div id="footer" class="ls6">
+        <img src="image/recruitment/footer.png">
+    </div>
+</body>
+<script>
+    //团队加延迟
+    $('#footer').on('tap', function () {
+        //loadrule_bg();
+        $('#rule').toggleClass('upin');
+        $('body').append('<div id="js_msk" class="ct-msk"></div>')
+        return false;
+    })
+    $('body').on('swipe, tap', function () {
+        $('#rule').removeClass('upin');
+    })
+    $('#rule').on('click', function () {
+        $('#js_msk').remove();
+    })
+    $(document).on('tap', '#js_msk', function () {
+        $('.ct-ly').remove();
+        $(this).remove();
+    })
+</script>
+
+</html>

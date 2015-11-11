@@ -1,0 +1,76 @@
+/*选择控件*/
+.fw_agtlist{width:190px;border:solid 1px #E2E5E7;background:#FFF;position:absolute;z-index:2000}
+.fw_agtlist dl{padding:2px 1px 3px 1px;font-size:12px;font-family:宋休}
+.fw_agtlist dl dt{height:23px;line-height:21px;color:#C9CACC;padding-left:5px}
+.fw_agtlist dl .agt_cate_line{border-top:1px dashed #E2E5E7}
+.fw_agtlist dl dd{height:42px;overflow:hidden}
+.fw_agtlist dl dd:hover,.fw_agtlist dl .on,.fw_agtlist dl .hover{background:#E6EAED;cursor:pointer}
+.fw_agtlist dl dd .fw_agtlist_ddleft{padding-top:5px;text-align:right;width:35px;float:left; clear:both}
+.fw_agtlist dl dd .fw_agtlist_ddleft .fw_agtlist_grpico{width: 30px;margin-top: 2px;margin-left: 2px;height: 30px;background: url(/default/javascripts/plugins/i8selector/img/selector_icos.png) no-repeat 0px -50px;}
+.fw_agtlist dl dd .fw_agtlist_ddleft .fw_agtlist_orgico{width: 30px;margin-top: 2px;margin-left: 2px;height: 30px;background: url(/default/javascripts/plugins/i8selector/img/selector_icos.png) no-repeat;}
+.fw_agtlist dl dd .fw_agtlist_ddleft img{width:30px;height:30px;}
+.fw_agtlist dl dd .fw_agtlist_ddright{width:153px;height:35px;float:left;position:relative;padding-top:5px; overflow:hidden}
+.fw_agtlist dl dd .fw_agtlist_ddright .sgt_groupname,.fw_agtlist dl dd .fw_agtlist_ddright .sgt_orgname{line-height:30px;color:#007FBA}
+.fw_agtlist dl dd .fw_agtlist_ddright .fw_agtlist_sname{display:block;height:20px;color:#007FBA;position:absolute;left:5px;top:5px}
+.fw_agtlist dl dd .fw_agtlist_ddright .fw_agtlist_sdepartment{display:block;height:20px;color:#595C6D;position:absolute;left:85px;top:5px; white-space:nowrap}
+.fw_agtlist dl dd .fw_agtlist_ddright .fw_agtlist_semail{display:block;height:20px;color:#bbb;position:absolute;left:5px;top:25px;font-family:Arial,Arial Baltic,Times New Roman; font-size:10px }
+.fw_ksntxtbox{min-width:100px;border:solid 1px #E2E5E7;font-size:12px;padding:1px 3px 1px 1px; cursor:text;position:relative}
+.fw_boxerContainer{width:430px;height:305px;padding:0px 10px 5px 10px;position:absolute;left:0px;top:23px;border:solid 1px #efefef;background:#fff;-webkit-box-shadow: -3px 3px 5px #DDD; -moz-box-shadow: -3px 3px 5px #DDD; box-shadow: -3px 3px 5px #DDD;}
+.fw_boxerContainer .bc_loading{margin:0 auto;height:20px;width:70px;}
+.fw_boxerContainer .bc_loading img{float:left;display:block}
+.fw_boxerContainer .bc_loading span{line-height:15px;float:left;display:block}
+.fw_boxerContainer .bcon_top{height:18px;text-align:right;line-height:16px}
+.fw_boxerContainer .bcon_top a{color:inherit;font-size:14px;text-decoration:none;}
+.fw_boxerContainer .bcon_center{width:430px;height:245px;}
+.fw_boxerContainer .bcon_center .bcc_left{width:240px;float:left}
+.fw_boxerContainer .bcon_center .bcc_left .bcl_srchbox{height:30px;position:relative;width:158px}
+.fw_boxerContainer .bcon_center .bcc_left .bcl_srchbox .span_act_search{width:16px;height:16px;cursor:pointer;position:absolute;right:12px;top:3px;display:block;background:transparent url(/default/javascripts/plugins/i8selector/img/selector_icos.png) no-repeat 0px -250px}
+.fw_boxerContainer .bcon_center .bcc_left .bcl_srchbox .span_act_delete{display: none;cursor:pointer;position:absolute;right:11px;top:4px;width: 14px;height: 14px;background: url(/default/javascripts/plugins/i8selector/img/icon_cross.png) no-repeat center center;}
+.fw_boxerContainer .bcon_center .bcc_left .bcl_srchbox input{outline:none;text-indent:3px}
+.fw_boxerContainer .bcon_center .bcc_left .bcl_list{padding-top:3px}
+.fw_boxerContainer .bcon_center .bcc_left .bcl_list .list_tab{height:20px;position:relative;z-index:5}
+.fw_boxerContainer .bcon_center .bcc_left .bcl_list .list_tab span{position:absolute;top:0px;height:19px;line-height:19px;cursor:pointer;display:block;padding:0px 8px;text-align:center;background:#FFF;float:left;border:1px solid #EFEFEF;border-bottom:none;border-top-left-radius:3px;-webkit-border-top-left-radius:3px;-moz-border-top-left-radius:3px;border-top-right-radius:3px;-webkit-border-top-right-radius:3px;-moz-border-top-right-radius:3px}
+.fw_boxerContainer .bcon_center .bcc_left .bcl_list .list_tab span.activetab{border-top:2px solid #44C7F3}
+.fw_boxerContainer .bcon_center .bcc_left .bcl_list .list_details{height:220px;border:1px solid #EFEFEF;overflow:hidden}
+.fw_boxerContainer .bcon_center .bcc_ctr{width:40px;float:left;}
+.fw_boxerContainer .bcon_center .bcc_ctr input[type='button'].btn_add_item{width:24px;height:24px;margin:130px 7px 0px 7px;cursor:pointer;border:none;background:transparent url(/default/javascripts/plugins/i8selector/img/selector_icos.png) no-repeat 0px -100px}
+.fw_boxerContainer .bcon_center .bcc_ctr input[type='button'].disable_add{background:transparent url(/default/javascripts/plugins/i8selector/img/selector_icos.png) no-repeat 0px -150px;cursor:default}
+.fw_boxerContainer .bcon_center .bcc_right{width:150px;height:245px;float:left}
+.fw_boxerContainer .bcon_center .bcc_right .bccr_selectedItem{height:241px;border:1px solid #EFEFEF;padding:1px;}
+.fw_boxerContainer .bcon_center .crop_grouplist{padding:1px}
+.fw_boxerContainer .bcon_center .crop_grouplist li{height:35px;vertical-align:bottom;overflow:hidden}
+.fw_boxerContainer .bcon_center .crop_grouplist li:hover{background:#E9EEF2;cursor:pointer}
+.fw_boxerContainer .bcon_center .crop_grouplist .liselected{background:#E9EEF2;}
+.fw_boxerContainer .bcon_center .crop_grouplist .crop_grp_ico{width:35px;margin-top:2px;margin-left:2px;height:30px;float:left;background:url(/default/javascripts/plugins/i8selector/img/selector_icos.png) no-repeat 0px -50px}
+.fw_boxerContainer .bcon_center .crop_grouplist .crop_org_ico{width:35px;margin-top:2px;margin-left:2px;height:30px;float:left;background:url(/default/javascripts/plugins/i8selector/img/selector_icos.png) no-repeat}
+.fw_boxerContainer .bcon_center .crop_grouplist .crop_text{float:left;line-height:35px;}
+.fw_boxerContainer .bccr_selectedItem .jkscroll-cont{padding-right:0px;}
+.fw_boxerContainer .bccr_selectedItem .item_slted{height:20px;line-height:20px;padding:0px 5px;margin-bottom:1px;display:block;position:relative;overflow:hidden;background:#E8EEF1}
+.fw_boxerContainer .bccr_selectedItem .item_slted em{display:block;font-style:normal;padding:0px 5px 0px 3px;color:#007FBA;}
+.fw_boxerContainer .bccr_selectedItem .item_slted a{position:absolute;right:3px;top:2px;display:block;font-weight:normal;width:14px;height:14px;background:url(/default/javascripts/plugins/i8selector/img/icon_cross.png) no-repeat;margin-top:2px;}
+.fw_boxerContainer .bccr_selectedItem .item_slted a:hover{background:url(/default/javascripts/plugins/i8selector/img/icon_cross_hover.png) no-repeat}
+#tbls_org_box,#tbls_grp_box{height:220px}
+.fw_boxerContainer .bcon_footer{text-align:center;padding:10px 0px 5px 0px}
+.fw_boxerContainer .btn_submit_select{width:50px;height:26px;text-align:center;border:none;color:#FFF;background:transparent url(/default/javascripts/plugins/i8selector/img/btnbgfd.png) no-repeat center center;cursor:pointer}
+/*.KSN_TextBox .KSN_Input*/
+.fw_ksntxtbox .fw_ksninput{overflow:hidden;padding-right:20px}
+.fw_ksntxtbox .fw_ksnplaceholder{position:absolute;left:3px;top:2px;color:#bebebe;height:20px;font-weight:normal}
+.fw_ksntxtbox .fw_ksntxtbox_alert_ico{background: transparent url(/default/images/design_bg_icons3.png) no-repeat -7px -415px}
+.fw_ksntxtbox .fw_ksntxtbox_ksi1{background:url(/default/javascripts/plugins/i8selector/img/uico.png) no-repeat right center;}
+/*.KSN_TextBox .KSI_2*/
+.fw_ksntxtbox .fw_ksntxtbox_ksi2{ background-color:#fff;background-image:url(/default/javascripts/plugins/i8selector/img/usico.png);background-repeat:no-repeat; background-position: right center;}
+/*.KSN_TextBox .KSN_Input input*/
+.fw_ksntxtbox .fw_ksninput input{border:none;outline:none;height:20px;min-height:20px;width:10px;display:block;float:left;text-indent:2px;padding-left:3px;background:transparent}
+/*.KSN_TextBox .KSN_Input .slted*/
+.fw_ksntxtbox .fw_ksninput .fw_ksninput_slted{height:20px;line-height:20px;padding:0px 5px;margin-right:1px;display:block;float:left;overflow:hidden;background:#E8EEF1}
+/*.KSN_TextBox .KSN_Input .slted em*/
+.fw_ksntxtbox .fw_ksninput .fw_ksninput_slted em{display:block;float:left;font-style:normal;padding:0px 5px 0px 3px;color:#007FBA;}
+/*.KSN_TextBox .KSN_Input .slted a*/
+.fw_ksntxtbox .fw_ksninput .fw_ksninput_slted a{display:block;float:left;font-weight:normal;width:14px;height:14px;background:url(/default/javascripts/plugins/i8selector/img/icon_cross.png) no-repeat;margin-top:2px;}
+/*.KSN_TextBox .KSN_Input .slted a:hover*/
+.fw_ksntxtbox .fw_ksninput .fw_ksninput_slted a:hover{display:block;float:left;font-weight:normal;width:14px;height:14px;background:url(/default/javascripts/plugins/i8selector/img/icon_cross_hover.png) no-repeat}
+.fw_ksntxtbox .fw_sboxer{width:17px;height:20px;position:absolute;right:2px;top:1px;cursor:pointer}
+
+/*工作流权限控制隐藏选人选组织控件删除按钮*/
+.fw_ksntxtbox.selector_close_hide {border:none !important;}
+.fw_ksntxtbox.selector_close_hide .fw_ksninput .fw_ksninput_slted a{display:none;}

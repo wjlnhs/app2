@@ -1,0 +1,146 @@
+<div class="cate-body">
+    <div class="preview m-l40">
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-85 l-h30">姓名</div>
+            <span class="w-365 m-r30 in-bl l-hh36"><%=Person.Name%></span>
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-70 l-h30">生日</div>
+            <span class="w-365 in-bl l-hh36"><%=PBI.Birthday%></span>
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-85 l-h30">英文名</div>
+            <span class="w-365 m-r30 in-bl l-hh36"><%=PBI.EnName%></span>
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-70 l-h30">座机</div>
+            <span class="w-365 in-bl l-hh36"><%=Person.Tel%></span>
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-85 l-h30">所在地</div>
+            <span class="w-365 m-r30 in-bl l-hh36"><%=PBI.Location%></span>
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-70 l-h30">手机</div>
+            <span class="w-365 in-bl l-hh36"><%=Person.MPhone%></span>
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-85 l-h30">部门</div>
+            <span class="w-365 m-r30 in-bl l-hh36"><%=Person.OrgName%></span>
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-70 l-h30">邮箱</div>
+            <span class="w-365 in-bl l-hh36"><%=Person.Email%></span>
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-85 l-h30">职位</div>
+            <span class="w-365 m-r30 in-bl l-hh36"><%=Person.Position%></span>
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-70 l-h30">Q Q</div>
+            <span class="w-365 in-bl l-hh36"><%=PBI.QQ%></span>
+        </div>
+        <div class="cate-row m-b15 lt m-r30">
+            <div class="black lt w-85 l-h30">性别</div>
+            <div class="w-365 lt">
+                <div class="cate-line lt w-85">
+                    <span class="design-bg-icons3 app-radio <% if(PBI.Gender) {%>checked<% } %> v--7"></span>
+                    <span class="black cate">男</span>
+                </div>
+                <div class="cate-line lt w-85">
+                    <span class="design-bg-icons3 app-radio <% if(!PBI.Gender) {%>checked<% } %> v--7"></span>
+                    <span class="black cate">女</span>
+                </div>
+            </div>
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-70 l-h30">MSN</div>
+            <span class="w-365 in-bl l-hh36"><%=PBI.MSN%></span>
+        </div>
+        <div class="clear"></div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-85 l-h30">一句话介绍</div>
+            <div class="w-830 on-words"><%=PBI.Comment%></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="cate-body b-blue-sty1 m-l40">
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-85 l-h30">姓名</div>
+            <input id="username" value="<%=Person.Name%>" defaultvalue="<%=Person.Name%>" class="w-365 m-r30" data-options='{"strmatch":"username","strfocus":"请输入您的姓名(2~15个字符)","strerror":"姓名必须输入(2~15个字符)"}' type="text" placeholder="廖飞机" />
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-70 l-h30">生日</div>
+            <input id="birthday" value="<%=: PBI.Birthday | dateformat: 'YYYY-MM-DD'%>" defaultvalue="<%=: PBI.Birthday | dateformat: 'YYYY-MM-DD'%>"  class="w-365" onclick='WdatePicker({ isShowClear: true, readOnly: true, dateFmt: "yyyy-MM-dd" })' type="text" placeholder="1988-09-16" />
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-85 l-h30">英文名</div>
+            <input id="englishName" value="<%=PBI.EnName%>" defaultvalue="<%=PBI.EnName%>" class="w-365 m-r30" data-options='{"strmatch":"nametext","strfocus":"请输入您的英文名(50个字符内)","strerror":"英文名输入错误或英文名超长(50个字符内)","isNull":true,"maxLength":50}' type="text" placeholder="Fay" />
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-70 l-h30">座机</div>
+            <input id="telephone" value="<%=Person.Tel%>" defaultvalue="<%=Person.Tel%>" class="w-365" data-options='{"strmatch":"tel","strfocus":"请输入座机,例如:021-88888888-888","isNull":true,"strerror":"座机输入错误"}'  type="text" placeholder="021-48470937" />
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-85 l-h30">所在地</div>
+            <div class="city-group w-365 m-r30 in-bl l-hh36 birthlocation" lev2code="<%=PBI.BirthLocation%>">
+                <input class="citylev1" defaultval="<%=PBI.Location%>" placeholder="-请选择-" type="text" value="上海市">
+                <input class="citylev2 rt" placeholder="-请选择-" type="text" value="">
+            </div>
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-70 l-h30">手机</div>
+            <input id="mobile" value="<%=Person.MPhone%>" defaultvalue="<%=Person.MPhone%>" class="w-365"  data-options='{"strmatch":"mobile","strfocus":"请输入您的手机号,例如:13888888888","strerror":"手机号输入错误","isNull":true}' type="text" placeholder="13876490836" />
+        </div>
+        <% if(Person.OrgName){ %>
+            <div class="cate-row m-b15 lt">
+                <div class="black lt w-85 l-h30">部门</div>
+                <span class="w-365 m-r30 in-bl l-hh36"><%=Person.OrgName%></span>
+            </div>
+            <div class="cate-row m-b15 lt" style="display: none" id="Orgunable">
+                <div class="black lt w-85 l-h30">部门</div>
+                <input id="department" class="w-365 m-r30" value="<%=Person.OrgName%>" defaultvalue="<%=Person.OrgName%>" type="text" placeholder="产品部" />
+            </div>
+        <% }else{ %>
+            <div class="cate-row m-b15 lt">
+                <div class="black lt w-85 l-h30">部门</div>
+                <input id="department" class="w-365 m-r30" value="<%=Person.OrgName%>" defaultvalue="<%=Person.OrgName%>" type="text" placeholder="产品部" />
+            </div>
+        <% } %>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-70 l-h30">邮箱</div>
+            <input id="personalEmailtxt" value="<%=Person.Email%>" defaultvalue="<%=Person.Email%>" class="w-365" data-options='{"strmatch":"email","strfocus":"请输入您的邮箱,例如:email@yourDomain.com","strerror":"邮箱输入错误","isNull":true}'  type="text" placeholder="807876436@qq.com" />
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-85 l-h30">职位</div>
+            <input id="position" value="<%=Person.Position%>" defaultvalue="<%=Person.Position%>" class="w-365 m-r30" data-options='{"strmatch":"nametext","strfocus":"请填写您的职位名称,2-15个字之间","strerror":"职位名输入错误，2-15个字之间","isNull":true,"maxLength":15,"minLength":2}' type="text" placeholder="UI设计" />
+        </div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-70 l-h30">Q Q</div>
+            <input id="qq" value="<%=PBI.QQ%>" defaultvalue="<%=PBI.QQ%>" class="w-365" data-options='{"strmatch":"^[0-9]*$","strfocus":"请输入您的QQ号,只能输入数字","strerror":"QQ号输入错误,QQ号只能输入数字","isNull":true,"maxLength":15}' type="text" placeholder="807876436" />
+        </div>
+        <div class="cate-row m-b15 lt m-r30">
+            <div class="black lt w-85 l-h30">性别</div>
+            <div class="w-365 lt">
+                <div class="cate-line lt w-85">
+                    <span class="design-bg-icons3 app-radio <% if(PBI.Gender) {%>checked<% } %>  v--7" defaultvalue="<% if(PBI.Gender) {%>checked<% } %>"></span>
+                    <span id="male" class="black cate">男</span>
+                </div>
+                <div class="cate-line lt w-85">
+                    <span class="design-bg-icons3 app-radio <% if(!PBI.Gender) {%>checked<% } %> v--7" defaultvalue="<% if(PBI.Gender) {%>checked<% } %>"></span>
+                    <span id="female" class="black cate">女</span>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="cate-row m-b15 lt">
+            <div class="black lt w-85 l-h30">一句话介绍</div>
+            <textarea id="introduce" value="<%=PBI.Comment%>" defaultvalue="<%=PBI.Comment%>" data-options='{"strmatch":"text","strfocus":"请用一句话介绍您自己(200字以内)","strerror":"介绍文字长度超长(200字以内)","isNull":true,"maxLength":200}' class="w-830 on-words"><%=PBI.Comment%></textarea>
+        </div>
+        <div class="clear"></div>
+        <div class="sub tcenter m-t15">
+            <span class="btn-blue-empty-h32 cancel">&nbsp;取 消&nbsp;</span>
+            <span class="btn-blue-h32 confirm m-l20">&nbsp;确 定&nbsp;</span>
+        </div>
+    </div>
+</div>

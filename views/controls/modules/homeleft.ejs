@@ -1,0 +1,81 @@
+<div class="my-info">
+    <img id="js-my-heading" class="my-headimg lt" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+    <p id="js-my-name" class="my-info-name">爱因斯坦</p>
+    <p id="js-my-bumen">产品发展部</p>
+</div>
+<div>
+    <ul class="app-lt-menu">
+        <li>流程</li>
+        <li>
+            <div class="app-lt-submenu fz14">
+                <a class="current"><i class="spbg1 sprite-38"></i>动态</a>
+                <a><i class="spbg1 sprite-41"></i>通讯录</a>
+                <span id="js_left_group" class="app-lt-group"><i class="spbg1 sprite-42"></i>群组<i class="sprite-gp"></i></span>
+                <div class="hide">
+                    <a class="nav-a1"><i class="spbg1 sprite-24"></i>进入群组</a>
+                    <a class="nav-a2"><i class="spbg1 sprite-43"></i>创建新群租</a>
+                </div>
+            </div>
+        </li>
+        <li>工作协作</li>
+        <li>
+            <div id="js_lt_work_menu" class="app-lt-submenu">
+                <!--<a class="current"><i class="spbg1 sprite-45"></i>周日报</a>-->
+                <!--<a><i class="spbg1 sprite-46"></i>日程</a>-->
+                <!--<a><i class="spbg1 sprite-47"></i>任务</a>-->
+                <!--<a><i class="spbg1 sprite-48"></i>微邮</a>-->
+                <!--<a><i class="spbg1 sprite-49"></i>知识库</a>-->
+                <!--<a><i class="spbg1 sprite-50"></i>投票</a>-->
+            </div>
+        </li>
+    </ul>
+    <ul class="app-lt-menu">
+        <li>
+            常用应用
+            <i id="js_links_set" class="rt spbg1 sprite-25"></i>
+        </li>
+        <li>
+            <div id="js_links_list" class="app-lt-submenu">
+                <a class="current"><i class="spbg1 sprite-51"></i>bugfree</a>
+                <a><i class="spbg1 sprite-51"></i>公司点餐系统</a>
+                <a><i class="spbg1 sprite-51"></i>投资管理系统</a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="lt-links-div hide" style=" position: absolute;">
+    <div class="rt-block">
+        <div class="rt-block-tt">
+            <div class="lt"><i></i>常用应用设置</div>
+            <div class="rt"></div>
+        </div>
+
+    </div>
+</div>
+<script id="js_links_html" type="text/html">
+    <div class="links-cont">
+        <input class="links-txt" type="text" placeholder="请输入常用链接名称" />
+        <input class="links-txt" type="text" placeholder="请输入常用链接地址" />
+        <span class="links-add-btn"><i class="heit">+</i>添加常用应用</span>
+        <ul class="links-ul-list m-t15 m-b10">
+            <li>
+                <label><input type="checkbox" />bugfree</label>
+            </li>
+            <li>
+                <label><input type="checkbox" />天猫旗舰店</label>
+            </li>
+            <li>
+                <label><input type="checkbox" />投资管理系统</label>
+            </li>
+            <li>
+                <label><input type="checkbox" />bugfree</label>
+            </li>
+        </ul>
+        <span class="btn-gray96x32 lt">取消</span>
+        <span class="btn-blue96x32 rt">确定</span>
+        <div class="clear"></div>
+    </div>
+</script>
+<script>
+    seajs.use('/default/javascripts/modules/homeleft.js');
+</script>

@@ -1,0 +1,6 @@
+[2015-07-28 21:53:49.362] [ERROR] normal - redis error:Redis connection to 192.168.93.252:6379 failed - read ECONNRESET
+[2015-08-12 15:46:07.462] [ERROR] normal - redis error:Redis connection to 192.168.93.252:6379 failed - read ECONNRESET
+[2015-08-12 16:12:57.058] [ERROR] normal - redis error:Redis connection to 192.168.93.252:6379 failed - read ECONNRESET
+[2015-08-14 10:05:23.466] [ERROR] normal - redis error:Redis connection to 192.168.93.252:6379 failed - read ECONNRESET
+[2015-10-28 17:26:12.974] [ERROR] normal - redis error:Redis connection to 192.168.93.252:6379 failed - read ECONNRESET
+[2015-11-05 14:00:10.531] [ERROR] normal - redis error:Redis connection to 192.168.93.252:6379 failed - read ECONNRESET

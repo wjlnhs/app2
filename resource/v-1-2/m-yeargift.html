@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>i8给您送年货</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+        <!--<meta name="viewport" content="width=device-width;initial-scale=1.0;user-scalable=no;target-densitydpi=device-dpi;">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <script src="js/zepto.js"></script>
+        <script src="js/iscroll.js"></script>
+        <script>
+            
+        </script>
+	</head>
+	<style>
+		/*::-webkit-scrollbar {
+			width: 14px;
+			height: 14px;
+		}
+
+		::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {
+			border-radius: 999px;
+			border: 5px solid transparent;
+		}
+
+		::-webkit-scrollbar-track {
+			box-shadow: 1px 1px 5px rgba(0,0,0,.2) inset;
+		}
+
+		::-webkit-scrollbar-thumb {
+			min-height: 20px;
+			background-clip: content-box;
+			box-shadow: 0 0 0 5px rgba(0,0,0,.2) inset;
+		}
+
+		::-webkit-scrollbar-corner {
+			background: transparent;
+		}*/
+        html{
+            height:100%;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            /* Prevent the callout on tap-hold and text selection */
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            /* Prevent text resize on orientation change, useful for web-apps */
+            -webkit-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            -o-text-size-adjust: none;
+            text-size-adjust: none;
+        }
+        #header {
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: 0;
+        }
+
+        
+
+        div.panel {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+		a {
+			cursor: pointer;
+		}
+		img {
+			padding: 0;
+			margin: 0;
+			display: block;
+		}
+		div.toppanel {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+		div.toppanel img {
+			border-bottom: 2px solid #d01b26;
+			box-shadow: 2px 2px 2px #d01b26;
+		}
+		a.register {
+			width: 27%;
+			height: 63%;
+			display: block;
+			position: absolute;
+			top: 16%;
+			right: 4%;
+		}
+		a.seemore {
+			position: absolute;
+			display: block;
+			width: 19.5%;
+			height: 24.5%;
+			top: 8%;
+			right: 9%;
+		}
+		a.seemore2 {
+			top: 67%;
+		}
+		a.linkregister {
+			position: absolute;
+			display: block;
+			width: 15.5%;
+			height: 13.5%;
+			top: 39%;
+			left: 4%;
+		}
+		a.seemore3 {
+			position: absolute;
+			display: block;
+			width: 20%;
+			height: 12%;
+			top: 32%;
+			right: 12%;
+		}
+		a.seemore4 {
+			top: 57%;
+		}
+		a.seemore5 {
+			top: 83%;
+		}
+		div.videolist {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+		}
+		div.video {
+
+			/*background: #fff;*/
+			width: 69.5%;
+			height: 24%;
+			left: 50%;
+			margin: auto;
+			margin-top: 30%;
+		}
+		div.video2 {
+			margin-top: 15%;
+		}
+		a.biglink {
+			position: absolute;
+			display: block;
+			width: 82%;
+			height: 31%;
+			top: 25%;
+			right: 9%;
+		}
+        .mobilelink {
+            width: 38%;
+            height: 36px;
+            top: 11%;
+            position: absolute;
+            left: 15%;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .qqlink {
+            position: absolute;
+            width: 20%;
+            top: 11%;
+            height: 32px;
+            left: 56%;
+            opacity: 0;
+        }
+        /*视频*/
+        #windowvideo {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background: #000;
+            z-index: 9999;
+        }
+
+            #windowvideo iframe {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                margin-top: -50px;
+            }
+
+        @media all and (orientation : landscape) {
+            #windowvideo iframe {
+                top: 0px !important;
+                width: 100% !important;
+                height: 100% !important;
+                transform: translateY(0%) !important;
+                -webkit-transform: translateY(0%) !important;
+                margin-top: 0px !important;
+            }
+        }
+        .arrow-up {
+            position: fixed;
+            width: 10%;
+            color: #fff;
+            bottom: 30px;
+            right: 30px;
+            margin: 0 auto;
+            z-index: 99999;
+        }
+	</style>
+<body>
+    <img class="arrow-up" src="image/yeargift/upwhite.png" />
+    <div id="header" class="toppanel">
+        <img width="100%" src="image/yeargift/wap_01.jpg" />
+        <a class="register" href="http://m.i8xiaoshi.com/v1-1/download.html" target="_blank"></a>
+    </div>
+        <div class="panes">
+            <div class="panel">
+                <img width="100%" src="image/yeargift/wap_0111.jpg" />
+            </div>
+            <div class="panel">
+                <img width="100%" src="image/yeargift/wap_02.jpg" />
+            </div>
+            <div class="panel">
+                <img width="100%" src="image/yeargift/wap_03.jpg" />
+                <a class="seemore">&nbsp;</a>
+                <a class="seemore seemore2">&nbsp;</a>
+            </div>
+            <div class="panel" id="id03">
+                <img width="100%" src="image/yeargift/wap_04.jpg" />
+                <a class="linkregister" href="http://m.i8xiaoshi.com/v1-1/download.html" target="_blank"></a>
+            </div>
+            <div class="panel">
+                <img width="100%" src="image/yeargift/wap_05.jpg" />
+                <a class="seemore3" href="http://m.i8xiaoshi.com/v1-1/download.html" target="_blank"></a>
+                <a class="seemore3 seemore4" href="http://m.i8xiaoshi.com/v1-1/download.html" target="_blank"></a>
+                <a class="seemore3 seemore5" href="http://m.i8xiaoshi.com/v1-1/download.html" target="_blank"></a>
+            </div>
+            <div class="panel">
+                <img width="100%" src="image/yeargift/wap_06.jpg" />
+                <div class="videolist">
+                    <div class="video videobox" id="video1" url="XODY3MDUxMDA4">
+                        <!--<iframe height=100% width=100% src="http://player.youku.com/embed/XODY3MDUxMDA4" frameborder=0 allowfullscreen></iframe>-->
+                    </div>
+                    <div class="video video2 videobox" id="video2" url="XODY3MDQyOTA0">
+                        <!--<iframe height=100% width=100% src="http://player.youku.com/embed/XODY3MDQyOTA0" frameborder=0 allowfullscreen></iframe>-->
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <img width="100%" src="image/yeargift/wap_07.jpg" />
+                <a class="biglink" href="http://m.i8xiaoshi.com/v1-1/download.html" target="_blank"></a>
+            </div>
+            <div class="panel">
+                <img width="100%" src="image/yeargift/wap_08.jpg" />
+                <a class="mobilelink" href="tel:4008771181">&nbsp;</a>
+                <a class="qqlink" href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODAyNTMwMl8xNjY3MDlfNDAwODc3MTE4MV8yXw">&nbsp;</a>
+            </div>
+        </div>
+</body>
+
+	<script>
+
+        window.onhashchange = function () {
+            if (window.location.hash.indexOf('i8video') < 0) {
+                if ($('#windowvideo').length > 0) {
+                    $('#windowvideo').remove();
+                    $('#header').show();
+                    $('.arrow-up').show();
+                    $('.panes').show();
+                }
+            }
+        }
+        function creatVideo(url, parent) {
+            if ($('#windowvideo').length > 0) {
+                $('#windowvideo').remove();
+            }
+            window.location.hash = "#i8video" + url;
+            var _width = $(parent).width();
+            var _height = _width * 624 / 640;
+            var videoStr = '<div id="windowvideo">\
+        <iframe height=' + _width + ' width=' + _height + ' src="http://player.youku.com/embed/' + url + '" frameborder=0 ></iframe></div>';
+            /*if(navigator.userAgent.indexOf('iPhone')<0){
+                window.location.href="http://player.youku.com/player.php/sid/"+url+"/v.swf";
+                return;
+            }*/
+            $(parent).append(videoStr)
+        }
+
+        $('.videobox').tap(function () {
+            $('#header').hide();
+            $('.panes').hide();
+            $('.arrow-up').hide();
+            var _url = $(this).attr('url');
+            creatVideo(_url,'body')
+        })
+		/*$('#video1').on('tap',function () {
+		    $(this).css({
+		        "opacity":1
+		    })
+		})
+		$('#video2').on('tap',function () {
+		    $(this).css({
+		        "opacity": 1
+		    })
+		})*/
+		 $('.seemore').on('tap', function () {
+		     var _top = $('#id03').offset().top-$('#header img').height();
+		    $('body')[0].scrollTop = _top;
+		    return false;
+		})
+
+		$('.arrow-up').on('tap', function () {
+		     $('body')[0].scrollTop = 0;
+		    return false;
+		})
+        
+	</script>
+</html>

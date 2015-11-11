@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta http-equiv="x-ua-compatible" content="IE=8" >
+    <!--start css-->
+    <link type="text/css" rel="stylesheet" href="../../resource/default/stylesheets/fw.css" />
+    <link type="text/css" rel="stylesheet" href="../../resource/default/stylesheets/app.css" />
+    <link type="text/css" rel="stylesheet" href="home.css" />
+    <!--end css-->
+</head>
+<body>
+<div class="app-header">
+    <div class="app-header-top">
+        <div class="login-info">
+            <a href="javascript:;"></a>
+            您好，欢迎来到i8工作流系统中心！ <a href="/logout" title="退出系统">退出</a>
+        </div>
+    </div>
+    <div class="app-header-main">
+        <a class="app-logo"></a>
+        <ul class="app-mapsite">
+            <li>
+                <a href="###">社区协作</a>
+            </li>
+            <li>
+                <a href="/main" class="current">数据流量</a>
+            </li>
+        </ul>
+        <div class="app-funs">
+            <div class="app_top_search">
+                <span id="js_header_search_btn" class="app_top_search_btn"></span>
+                <input id="js_header_search_txt" class="app_top_search_input" type="text">
+                <span class="app_top_search_mask" >搜索侃侃、动态、同事、文档 <i class="app_top_search_btn"></i></span>
+                <div style="display: none" id="com_top_headdown_tempSuggestBox"></div>
+            </div>
+            <ul class="my-system">
+                <li class="my-info">
+                    <a >&nbsp;</a>
+                    <div class="my-system-menu">
+                        <div class="my-system-posi"></div>
+                        <a><i class="sp-menu-hd1"></i>个人设置</a>
+                        <a><i class="sp-menu-hd3"></i>修改头像</a>
+                        <a><i class="sp-menu-hd3"></i>密码重置</a>
+                        <a><i class="sp-menu-hd4"></i>提醒设置</a>
+                        <a><i class="sp-menu-hd5"></i>退出</a>
+                    </div>
+                </li>
+                <li class="my-message">
+                    <a >&nbsp;</a>
+                    <div class="my-system-menu">
+                        <div class="my-system-posi"></div>
+                        <a><span class="my-tips-num">1</span>人参与新投票</a>
+                        <a><i class="sp-menu-hd6"></i>评论</a>
+                        <a><i class="sp-menu-hd7"></i>@我的</a>
+                        <a><i class="sp-menu-hd8"></i>系统消息</a>
+                    </div>
+                    <div class="system-message-div">
+                        <a><span class="my-tips-num">1</span>人参与新投票</a>
+                        <span class="my-tps-close"></span>
+                    </div>
+                </li>
+                <li class="my-set"><a >&nbsp;</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="app-content-bg">
+    <div class="lt-bgcolor"></div>
+    <div class="app-content">
+    <div class="app-lt lt">
+        <div class="m-t5">
+            <ul class="app-lt-menu">
+                <li>个人设置</li>
+                <li>
+                    <div class="app-lt-submenu">
+                        <a class="current"><i class="spbg1 sprite-10"></i>个人设置</a>
+                        <a><i class="spbg1 sprite-11"></i>头像修改</a>
+                        <a><i class="spbg1 sprite-14"></i>密码修改</a>
+                        <a><i class="spbg1 sprite-13"></i>提醒设置</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="app-ct w1049 lt">
+        <div class="i-set">
+            <div class="i-set-block">
+                <div class="iset-tt">
+                    <i class="spbg1 sprite-9"></i><span class="iset-tt-name">邮箱账号</span>wuzhiyan@i8xiaoshi.net
+                    <span class="iset-tt-btn rt">
+                        <i class="spbg1 sprite-62"></i>取消该账号
+                    </span>
+                </div>
+                <div class="iset-cont">
+                    <dl class="iset-cont-dl">
+                        <dt>当前账号</dt>
+                        <dd><span class="dcolor">&nbsp;wuzhiyan@i8xiaoshi.net</span></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>新邮箱</dt>
+                        <dd><input type="text" class="iset-input" placeholder="请输入新手机号" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>密码</dt>
+                        <dd><input type="text" class="iset-input" placeholder="请输入当前登录密码" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>验证码</dt>
+                        <dd>
+                            <input type="text" class="iset-input" placeholder="邮件中六位验证码" />
+                            <label class="lb-ckbox mg-lt85 dcolor"><input type="checkbox" />同时修改我在“上海汇明”个人信息的邮箱</label>
+                        </dd>
+                    </dl>
+                    <div class="iset-cont-dl tcenter">
+                        <span class="iset-btn-cancel">取 消</span>
+                        <span class="iset-btn-define">确 定</span>
+                    </div>
+                </div>
+            </div>
+            <div class="i-set-block">
+                <div class="iset-tt">
+                    <i class="spbg1 sprite-12"></i><span class="iset-tt-name">手机账号</span>138-3838-3838
+                    <span class="iset-tt-btn rt">
+                        <i class="spbg1 sprite-62"></i>取消该账号
+                    </span>
+                </div>
+                <div class="iset-cont">
+                    <dl class="iset-cont-dl">
+                        <dt>当前手机号</dt>
+                        <dd><span class="dcolor">&nbsp;13838383838</span></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>新手机号</dt>
+                        <dd><input type="text" class="iset-input" placeholder="请输入新手机号" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>密码</dt>
+                        <dd><input type="text" class="iset-input" placeholder="请输入当前登录密码" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>手机验证码</dt>
+                        <dd>
+                            <input type="text" class="iset-input" style="width: 650px;" placeholder="短信中六位验证码" />
+                            <span class="iset-btn-get">获取验证码</span>
+                        </dd>
+                    </dl>
+                    <div class="iset-cont-dl tcenter">
+                            <span class="iset-btn-cancel">取 消</span>
+                            <span class="iset-btn-define">确 定</span>
+                        </div>
+                </div>
+            </div>
+            <div class="i-set-block">
+                <div class="iset-tt">
+                    <i class="spbg1 sprite-15"></i><span class="iset-tt-name">个人资料</span>这个家伙很懒~
+                    <span class="dcolor rt">
+                        <i class="spbg1 sprite-63"></i>收起
+                    </span>
+                </div>
+                <div class="iset-cont">
+                    <dl class="iset-cont-dl">
+                        <dt>姓名</dt>
+                        <dd class="lt w350"><input type="text" class="iset-input w-ban" value="廖飞机" /></dd>
+                        <dt class="m-l15 p-l20">生日</dt>
+                        <dd><input type="text" class="iset-input w-ban" value="1988-09-16" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>英文名</dt>
+                        <dd class="lt w350"><input type="text" class="iset-input w-ban" value="廖飞机" /></dd>
+                        <dt class="m-l15 p-l20">座机</dt>
+                        <dd><input type="text" class="iset-input w-ban" value="1988-09-16" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>所在地</dt>
+                        <dd class="lt w350"><input type="text" class="iset-input w-ban" value="廖飞机" /></dd>
+                        <dt class="m-l15 p-l20">手机</dt>
+                        <dd><input type="text" class="iset-input w-ban" value="1988-09-16" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>部门</dt>
+                        <dd class="lt w350"><input type="text" class="iset-input w-ban" value="廖飞机" /></dd>
+                        <dt class="m-l15 p-l20">邮箱</dt>
+                        <dd><input type="text" class="iset-input w-ban" value="1988-09-16" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>职位</dt>
+                        <dd class="lt w350"><input type="text" class="iset-input w-ban" value="廖飞机" /></dd>
+                        <dt class="m-l15 p-l20">QQ</dt>
+                        <dd><input type="text" class="iset-input w-ban" value="1988-09-16" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>性别</dt>
+                        <dd class="lt w350">
+                            <label class="lb-ckbox"><input type="radio" name="sex" /> 男</label>
+                            <label class="lb-ckbox m-95"><input type="radio" name="sex" /> 女</label>
+                        </dd>
+                        <dt class="m-l15 p-l20">MSN</dt>
+                        <dd><input type="text" class="iset-input w-ban" value="1988-09-16" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>一句话介绍</dt>
+                        <dd class="">
+                            <textarea class="iset-txt">有钱，任性</textarea>
+                        </dd>
+                    </dl>
+                    <div class="iset-cont-dl tcenter">
+                        <span class="iset-btn-cancel">取 消</span>
+                        <span class="iset-btn-define">确 定</span>
+                    </div>
+                </div>
+            </div>
+            <div class="i-set-block">
+                <div class="iset-tt">
+                    <i class="spbg1 sprite-16"></i><span class="iset-tt-name">个人标签</span>
+                    <span class="dcolor rt">
+                        <i class="spbg1 sprite-63"></i>收起
+                    </span>
+                </div>
+                <div class="iset-cont">
+                    <div class="iset-cont-dl">
+                        <input class="iset-input w350" placeholder="限8个字，空格分开" />
+                        <span class="iset-label">摄影技巧<i class="spbg1 sprite-65"></i></span>
+                        <span class="iset-label">摄影技巧<i class="spbg1 sprite-65"></i></span>
+                        <span class="iset-label">摄影技巧<i class="spbg1 sprite-65"></i></span>
+                        <span class="iset-label">摄影技巧<i class="spbg1 sprite-65"></i></span>
+                        <span class="iset-label">摄影技巧<i class="spbg1 sprite-65"></i></span>
+                        <span class="iset-label">摄影技巧<i class="spbg1 sprite-65"></i></span>
+                        <span class="iset-label">摄影技巧<i class="spbg1 sprite-65"></i></span>
+                    </div>
+                    <div class="iset-label-bd">
+                        你可能感兴趣的标签：
+                        <span class="iset-label">摄影技巧<i class="spbg1 sprite-67"></i></span>
+                        <span class="iset-label">摄影技巧<i class="spbg1 sprite-67"></i></span>
+                        <span class="iset-label">摄影技巧<i class="spbg1 sprite-67"></i></span>
+                    </div>
+                    <div class="iset-cont-dl tcenter">
+                        <span class="iset-btn-cancel">取 消</span>
+                        <span class="iset-btn-define">确 定</span>
+                    </div>
+                </div>
+            </div>
+            <div class="i-set-block">
+                <div class="iset-tt">
+                    <i class="spbg1 sprite-17"></i><span class="iset-tt-name">工作信息</span>~
+                    <span class="dcolor rt">
+                        <i class="spbg1 sprite-63"></i>收起
+                    </span>
+                </div>
+                <div class="iset-works">
+                    <div class="iset-works-op">
+                        <span class="lt">2014年4月 - 至今 上海汇明信息技术有限公司</span>
+                        <div class="rt">
+                            <span class="iset-works-btn dcolor"><i class="spbg1 sprite-69"></i>编辑</span>
+                            <span class="iset-works-btn dcolor"><i class="spbg1 sprite-70"></i>删除</span>
+                        </div>
+                    </div>
+                    <div class="p-l20">
+                        <dl class="iset-cont-dl">
+                            <dt>公司</dt>
+                            <dd>上海汇明信息技术有限公司</dd>
+                        </dl>
+                        <dl class="iset-cont-dl">
+                            <dt>地区</dt>
+                            <dd>上海浦东</dd>
+                        </dl>
+                        <dl class="iset-cont-dl">
+                            <dt>时间</dt>
+                            <dd>2014年4月-至今</dd>
+                        </dl>
+                        <dl class="iset-cont-dl">
+                            <dt>职位</dt>
+                            <dd>产品总监</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="iset-works">
+                    <div class="iset-works-op">
+                        <span class="lt">2014年4月 - 至今 上海汇明信息技术有限公司</span>
+                        <div class="rt">
+                            <span class="iset-works-btn dcolor"><i class="spbg1 sprite-69"></i>编辑</span>
+                            <span class="iset-works-btn dcolor"><i class="spbg1 sprite-70"></i>删除</span>
+                        </div>
+                    </div>
+                    <div class="p-l20">
+                        <dl class="iset-cont-dl">
+                            <dt>公司</dt>
+                            <dd>上海汇明信息技术有限公司</dd>
+                        </dl>
+                        <dl class="iset-cont-dl">
+                            <dt>地区</dt>
+                            <dd>上海浦东</dd>
+                        </dl>
+                        <dl class="iset-cont-dl">
+                            <dt>时间</dt>
+                            <dd>2014年4月-至今</dd>
+                        </dl>
+                        <dl class="iset-cont-dl">
+                            <dt>职位</dt>
+                            <dd>产品总监</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="iset-cont">
+                    <dl class="iset-cont-dl">
+                        <dt>公司</dt>
+                        <dd><input type="text" class="iset-input" value="上海汇明信息技术有限公司" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>地区</dt>
+                        <dd><input type="text" class="iset-input" value="上海浦东" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>时间</dt>
+                        <dd><input type="text" class="iset-input" value="2014年4月-至今" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>职位</dt>
+                        <dd>
+                            <input type="text" class="iset-input" value="产品总监" />
+                        </dd>
+                    </dl>
+                    <div class="iset-cont-dl tcenter">
+                        <span class="iset-btn-cancel">取 消</span>
+                        <span class="iset-btn-define">确 定</span>
+                    </div>
+                </div>
+            </div>
+            <div class="i-set-block">
+                <div class="iset-tt">
+                    <i class="spbg1 sprite-18"></i><span class="iset-tt-name">教育信息</span>
+                    <span class="dcolor rt">
+                        <i class="spbg1 sprite-63"></i>收起
+                    </span>
+                </div>
+                <div class="iset-works">
+                    <div class="iset-works-op">
+                        <span class="lt">2014年4月 - 至今 东华大学</span>
+                        <div class="rt">
+                            <span class="iset-works-btn dcolor"><i class="spbg1 sprite-69"></i>编辑</span>
+                            <span class="iset-works-btn dcolor"><i class="spbg1 sprite-70"></i>删除</span>
+                        </div>
+                    </div>
+                    <div class="p-l20">
+                        <dl class="iset-cont-dl">
+                            <dt>学校</dt>
+                            <dd>东华大学</dd>
+                        </dl>
+                        <dl class="iset-cont-dl">
+                            <dt>院系</dt>
+                            <dd>新闻媒体系</dd>
+                        </dl>
+                        <dl class="iset-cont-dl">
+                            <dt>时间</dt>
+                            <dd>2014-01 - 2014-12</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="iset-cont">
+                    <dl class="iset-cont-dl">
+                        <dt>学校</dt>
+                        <dd><input type="text" class="iset-input" value="东华大学" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>院系</dt>
+                        <dd><input type="text" class="iset-input" value="新闻媒体系" /></dd>
+                    </dl>
+                    <dl class="iset-cont-dl">
+                        <dt>时间</dt>
+                        <dd><input type="text" class="iset-input" value="2014年4月-2014年12月" /></dd>
+                    </dl>
+                    <div class="iset-cont-dl tcenter">
+                        <span class="iset-btn-cancel">取 消</span>
+                        <span class="iset-btn-define">确 定</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="app-footer">
+    <ul class="links-list">
+        <li >
+            <a href="###">联系我们</a><span>|</span>
+        </li>
+        <li >
+            <a href="###">安全隐私</a><span>|</span>
+        </li>
+        <li >
+            <a href="###">合作伙伴</a>
+        </li>
+        <li >
+            <a class="footer-phone"></a>
+        </li>
+        <li >
+            <a class="footer-qq"></a>
+        </li>
+    </ul>
+    <div class="app-copyright">
+        沪ICP备13026113号 Copyright @ 2012-2014 i8xiaoshi
+    </div>
+</div>
+<script  src="../../resource/default/javascripts/common/jquery-1.8.3.min.js"></script>
+<script  src="../../resource/default/javascripts/common/sea.js"></script>
+<script  src="../../resource/default/javascripts/common/i8_global.js"></script>
+<script>
+
+</script>
+</body>
+</html>
+

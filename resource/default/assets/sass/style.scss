@@ -1,0 +1,35 @@
+@import "./comm/comm.scss";
+$blue: #3bbfce;
+$margin: 55px;
+
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  background: red;
+}
+body{
+  @include rgba(161, 195, 58, 0.3);
+  height: 600px;
+}
+.content-navigation {
+  border-color: $blue;
+  color: darken($blue, 9%);
+  margin:$margin;
+}
+
+//page
+#page1{
+//  background: url('../../../../v-1-1/images/begin.jpg') center no-repeat;
+  @include bgSize(452px 755px)
+}
+
+.begin .page-btn{
+  width: 100px;
+  height: 100px;
+  @include sim(in-bl v-t);
+  margin-top: 650px;
+  margin-left: 120px;
+}

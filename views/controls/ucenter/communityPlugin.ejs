@@ -1,0 +1,408 @@
+<%-contentFor('headerContent')%>
+<link type="text/css" rel="stylesheet" href="<%-locals.userBaseInfo.resHost%>default/stylesheets/fw.css"/>
+<link type="text/css" rel="stylesheet" href="<%-locals.userBaseInfo.resHost%>default/stylesheets/home.css"/>
+<link type="text/css" rel="stylesheet" href="<%-locals.userBaseInfo.resHost%>default/stylesheets/communityPlugin.css"/>
+
+<%-contentFor('centerContent')%>
+<div class="lt-bgcolor"></div>
+<div class="app-content">
+<div class="app-lt lt">
+    <div class="my-info">
+        <img class="my-headimg lt" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+        <p class="my-info-name">爱因斯坦</p>
+        <p>产品发展部</p>
+    </div>
+    <div>
+        <ul class="app-lt-menu">
+            <li>流程</li>
+            <li>
+                <div class="app-lt-submenu fz12">
+                    <a class="current"><i class="spbg1 sprite-38"></i>动态</a>
+                    <a><i class="spbg1 sprite-41"></i>通讯录</a>
+                    <span class="app-lt-group"><i class="spbg1 sprite-42"></i>群组</span>
+                    <div class="">
+                        <a class="nav-a1"><i class="spbg1 sprite-24"></i>进入群组</a>
+                        <a class="nav-a2"><i class="spbg1 sprite-43"></i>创建新群租</a>
+                    </div>
+                </div>
+            </li>
+            <li>工作协作</li>
+            <li>
+                <div class="app-lt-submenu">
+                    <a class="current"><i class="spbg1 sprite-45"></i>周日报</a>
+                    <a><i class="spbg1 sprite-46"></i>日程</a>
+                    <a><i class="spbg1 sprite-47"></i>任务</a>
+                    <a><i class="spbg1 sprite-48"></i>微邮</a>
+                    <a><i class="spbg1 sprite-49"></i>知识库</a>
+                    <a><i class="spbg1 sprite-50"></i>投票</a>
+                </div>
+            </li>
+            <li>常用应用</li>
+            <li>
+                <div class="app-lt-submenu">
+                    <a class="current"><i class="spbg1 sprite-51"></i>bugfree</a>
+                    <a><i class="spbg1 sprite-51"></i>公司点餐系统</a>
+                    <a><i class="spbg1 sprite-51"></i>投资管理系统</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="app-ct w790 lt">
+    <div class="communityPlugin">
+        <ul class="tab-nav heit">
+            <li class="s-icon kk-btn">侃侃</li>
+            <li class="s-icon schedule-btn">日程</li>
+            <li class="s-icon weekofdaily-btn">周日报</li>
+        </ul>
+        <div class="kk-tab">
+            <div class="kk-body">
+                <div class="kk-content rel">
+                    <textarea class="kk-content-text">@产品技术委员会@爱因斯坦</textarea>
+                    <i class="icon headofarrow" ></i>
+                </div>
+                <div class="kk-footer">
+                    <ul class="functions-btns-left">
+                        <li class="s-icon attachment-btn">附件</li>
+                        <li class="s-icon expression-btn active">表情 </li>
+                        <li class="s-icon topic-btn">话题</li>
+                    </ul>
+                    <a class="btn-blue-h32 kk-sub">发布</a>
+                    <div class="release-scope">
+                        <div class="release-scope-title s-icon">请选择发布范围<i class="icon"></i></div>
+                        <ul class="release-scope-group">
+                            <li class="s-icon enterprise-community-btn">企业社区</li>
+                            <li class="s-icon only-visible-btn">仅@可见</li>
+                            <li class="icon new-group-btn">创建新群组</li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="attachment-tip abs">
+                最多5个文件，单个文件不超过30M 支持格式：图片、都doc、xls、ppt、txt、rar、pdf
+                <i class="icon headofarrow"></i>
+            </div>
+            <div class="kk-functions">
+                <div class="kk-attach-box" style="display: none">
+                    <ul>
+                        <li class="pic"><span></span><b>产品技术委员会.png</b><i class="delete-attach"></i></li>
+                        <li class="pdf"><span></span><b>产品技术委员会.pdf</b><i class="delete-attach"></i></li>
+                        <li class="ppt"><span></span><b>产品技术委员会.ppt</b><i class="delete-attach"></i></li>
+                        <li class="rar"><span></span><b>产品技术委员会.rar</b><i class="delete-attach"></i></li>
+                        <li class="txt"><span></span><b>产品技术委员会.txt</b><i class="delete-attach"></i></li>
+                        <li class="doc"><span></span><b>产品技术委员会.doc</b><i class="delete-attach"></i></li>
+                        <li class="xls"><span></span><b>产品技术委员会.xls</b><i class="delete-attach"></i></li>
+                        <li class="custom"><span></span><b>产品技术委员会.pdf</b><i class="delete-attach"></i></li>
+                    </ul>
+                </div>
+                <div class="expression-box" style="display: none">
+                    <img src="/default/images/community/expression.png">
+                </div>
+                <div class="topic-box"></div>
+            </div>
+
+        </div>
+        <div class="schedule-tab i8-form">
+            <div class="schedule-body">
+                <input class="schedule-name" placeholder="日程名称" />
+                <div class="scheduleinput-box">
+                    <input class="scheduleinput" placeholder="日程">
+                    <i class="icon icon_select_gray"></i>
+                </div>
+                <div class="scheduleinput-box m-r0">
+                    <input placeholder="2014-10-22">
+                    <i class="icon icon_select_gray"></i>
+                </div>
+                <div class="scheduleinput-box">
+                    <input class="scheduleinput" placeholder="17：30">
+                    <i class="icon icon_select_gray"></i>
+                </div>
+                <div class="scheduleinput-box m-r0">
+                    <input placeholder="17：50">
+                    <i class="icon icon_select_gray"></i>
+                </div>
+                <div class="clear"></div>
+                <div class="cate-row m-t15">
+                    <span class="design-bg-icons3 app-checkbox checked v--4"></span>
+                    <span class="cate repeat-cycle-txt">重复循环</span>
+                </div>
+                <div class="cate-row circulation">
+                    <div class="schedule-time"><div class="in-bl w-70">日程时间</div>  16:00-16:30</div>
+                    <div class="schedule-cycle">
+                        <div class="in-bl w-70">循环周期</div>
+                        <div class="in-bl w-85">
+                            <span class="design-bg-icons3 app-radio checked"></span>
+                            <span class="cate">每周</span>
+                        </div>
+                        <div class="in-bl w-85">
+                            <span class="design-bg-icons3 app-radio checked"></span>
+                            <span class="cate">每日</span>
+                        </div>
+                    </div>
+                    <div class="scheduleinput-box">
+                        <input placeholder="2014-10-22">
+                    </div>
+                    <div class="scheduleinput-box m-r0">
+                        <input class="scheduleinput" placeholder="2014-10-22">
+                    </div>
+                    <div class="select-day">
+                        <div>
+                            <span class="design-bg-icons3 app-checkbox checked"></span>
+                            <span>周一</span>
+                        </div>
+                        <div>
+                            <span class="design-bg-icons3 app-checkbox"></span>
+                            <span>周二</span>
+                        </div>
+                        <div>
+                            <span class="design-bg-icons3 app-checkbox"></span>
+                            <span>周三</span>
+                        </div>
+                        <div>
+                            <span class="design-bg-icons3 app-checkbox"></span>
+                            <span>周四</span>
+                        </div>
+                        <div>
+                            <span class="design-bg-icons3 app-checkbox"></span>
+                            <span>周五</span>
+                        </div>
+                        <div>
+                            <span class="design-bg-icons3 app-checkbox"></span>
+                            <span>周六</span>
+                        </div>
+                        <div>
+                            <span class="design-bg-icons3 app-checkbox"></span>
+                            <span>周日</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="select-location">
+                    <input class="schedule-location" placeholder="地点" />
+                    <a class="icon icon-pin"></a>
+                </div>
+                <div class="select-people">
+                    <input class="schedule-people"  />
+                    <a class="icon icon-people-online"></a>
+                    <div class="people-tiles">
+                        <span class="tile-nor">蔡宝<i class="icon"></i></span>
+                        <span class="tile-nor">蔡妹纸<i class="icon"></i></span>
+                    </div>
+                </div>
+                <div class="prompt-time">
+                    <div class="schedule-time-title">
+                        到期时间：任务到期前
+                    </div>
+                    <input class="schedule-time-hour"  placeholder="15"/>
+                    <div class="scheduleinput-box m-r0">
+                        <input class="schedule-time-min" placeholder="分钟">
+                        <i class="icon icon_select_gray"></i>
+                    </div>
+                    <textarea placeholder="详细内容"></textarea>
+                </div>
+            </div>
+            <div class="schedule-footer">
+                <ul class="functions-btns-left">
+                    <li class="s-icon attachment-btn">附件</li>
+                </ul>
+                <a class="btn-blue-h32 schedule-sub">发布</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="weekofdaily-tab i8-form">
+            <div class="weekofdaily-body">
+                <div class="weekordaily">
+                    <div class="in-bl">
+                        <span class="design-bg-icons3 app-radio"></span>周报
+                    </div>
+                    <div class="in-bl">
+                        <span class="design-bg-icons3 app-radio checked"></span>日报
+                    </div>
+                </div>
+                <div class="gets-previous-plan">
+                    <input type="text"  placeholder="2014-10-22"/> &nbsp;至&nbsp;
+                    <input type="text"  placeholder="2014-10-22"/>
+                    <a class="btn-blue-h32 gets-previous-plan-sub">获取上期计划</a>
+                </div>
+                t type="text" placeholder="本期总结" />
+                <input type="text" placeholder="本期总结"/>
+                <h2>下期计划</h2><h2>本期总结</h2>
+                <inpu
+                <input type="text" placeholder="下期计划" />
+                <input type="text" placeholder="下期计划"/>
+                <div class="select-people">
+                    <input class="select-people-input"  />
+                    <a class="icon icon-people-online"></a>
+                    <div class="people-tiles">
+                        <span class="tile-nor">蔡宝<i class="icon"></i></span>
+                        <span class="tile-nor">蔡妹纸<i class="icon"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="weekofdaily-footer">
+                <ul class="functions-btns-left">
+                    <li class="s-icon attachment-btn">附件</li>
+                </ul>
+                <a class="btn-blue-h32 weekofdaily-sub">发布</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div class="app-rt w252 rt">
+    <div class="rt-block">
+        <div class="rt-block-tt heit">
+            <div class="lt"><i></i>新员工风采</div>
+        </div>
+        <div class="rt-block-cont">
+            <div class="">
+                <div class="rt-new-people">
+                    <div class="rt-birthday-hd">
+                        <img class="my-headimg lt" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+                        <p><span class="rt-birthday-name">爱因斯坦</span>09.29</p>
+                        <p>2014/05/09首次登录</p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="new-people-info">
+                        <p><i class="spbg1 sprite-55"><b></b></i> 籍贯 湖北宜昌</p>
+                        <p><i class="spbg1 sprite-56"><b></b></i> 星座 处女座</p>
+                        <p><i class="spbg1 sprite-57"></i> 爱好 炸金花、篮球</p>
+                    </div>
+                </div>
+                <div class="rt-new-people">
+                    <div class="rt-birthday-hd">
+                        <img class="my-headimg lt" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+                        <p><span class="rt-birthday-name">爱因斯坦</span>09.29</p>
+                        <p>2014/05/09首次登录</p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="new-people-info">
+                        这个人很懒，<a>邀请TA尽快完善信息吧！</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rt-block">
+        <div class="rt-block-tt heit">
+            <div class="lt "><i></i>我的日程</div>
+        </div>
+        <div class="rt-block-cont">
+            <div class="rt-task">
+                <div class="rt-task-type lt bdrt1">
+                    <span class="rt-task-c1">4</span>
+                    <span>待办的</span>
+                </div>
+                <div class="rt-task-type lt bdrt1">
+                    <span class="rt-task-c2">5</span>
+                    <span>发起的</span>
+                </div>
+                <div class="rt-task-type lt">
+                    <span class="rt-task-c3">7</span>
+                    <span>参与的</span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="rt-task-end">
+                任务延误率：30%
+            </div>
+        </div>
+    </div>
+    <div class="rt-block">
+        <div class="rt-block-tt heit">
+            <div class="lt"><i></i>生日祝福</div>
+        </div>
+        <div class="rt-block-cont">
+            <div class="rt-birthday">
+                <div class="rt-birthday-tt">
+                    <img class="lt rt-birthday-img" src="http://hvming.i8xiaoshi.com/resource/default/zh-cn/images/gift/dangao.png">
+                    近期有 <span class="rt-birthday-c">2</span> 位同事将过生日，
+                    我们祝他生日快乐!
+                </div>
+                <div class="rt-birthday-info">
+                    <div class="rt-birthday-hd">
+                        <img class="my-headimg lt" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+                        <p><span class="rt-birthday-name">爱因斯坦</span>09.29</p>
+                        <p>09.29 天平座</p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="rt-birthday-tr oflow">
+                        <span class="rt-birthday-td lt"><i class="spbg1 sprite-53"></i>生日快乐</span>
+                        <span class="rt-birthday-td rt"><i class="spbg1 sprite-54"></i>送TA礼物</span>
+                        <div class="clear"></div>
+                        <div class="rt-birthday-persons">
+                            <span class="rt-linj">◆<span>◆</span></span>
+                            <img class="" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+                            <img class="" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+                            <img class="" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+                            <img class="" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+                            <img class="" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="rt-birthday-info">
+                    <div class="rt-birthday-hd">
+                        <img class="my-headimg lt" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+                        <p><span class="rt-birthday-name">爱因斯坦</span>09.29</p>
+                        <p>09.29 天平座</p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="rt-birthday-tr oflow">
+                        <span class="rt-birthday-td lt"><i class="spbg1 sprite-53"></i>生日快乐</span>
+                        <span class="rt-birthday-td rt"><i class="spbg1 sprite-54"></i>送TA礼物</span>
+                        <div class="clear"></div>
+                        <div class="rt-birthday-persons">
+                            <span class="rt-linj">◆<span>◆</span></span>
+                            <img class="" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+                            <img class="" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+                            <img class="" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+                            <img class="" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+                            <img class="" src="http://hvming.i8xiaoshi.com/ResourceStore/HeadMiddle/4808a9a1-0da7-49cb-868a-e1572e971ca5.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rt-block">
+        <div class="rt-block-tt heit">
+            <div class="lt"><i></i>i8小时社区</div>
+        </div>
+        <div class="rt-block-cont">
+            <ul class="rt-topic">
+                <li><a>i8小时9月24日升级内容</a></li>
+                <li><a>如何在微信上使用i8小时</a></li>
+                <li><a>多人日程共享的技巧</a></li>
+                <li><a>i8小时新手入门</a></li>
+                <li><a>i8小时9月24日升级内容</a></li>
+                <li><a>如何在微信上使用i8小时</a></li>
+                <li><a>多人日程共享的技巧</a></li>
+                <li><a>i8小时新手入门</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="rt-block">
+        <div class="rt-block-tt heit">
+            <div class="lt"><i></i>热门话题</div>
+        </div>
+        <div class="rt-block-cont">
+            <ul class="rt-topic">
+                <li><a>#端午节活动#</a></li>
+                <li><a>#端午节活动#</a></li>
+                <li><a>#端午节活动#</a></li>
+                <li><a>#端午节活动#</a></li>
+                <li><a>#端午节活动#</a></li>
+                <li><a>#端午节活动#</a></li>
+                <li><a>#端午节活动#</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<%-contentFor('footerContent')%>
+<script>
+    seajs.use('<%-locals.userBaseInfo.resHost%>default/javascripts/ucenter/communityPlugin');
+</script>

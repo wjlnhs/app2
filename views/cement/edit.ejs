@@ -1,0 +1,75 @@
+<%-contentFor('headerContent')%>
+<link type="text/css" rel="stylesheet" href="<%-locals.userBaseInfo.resHost%>default/stylesheets/home.css"/>
+<script type="text/javascript" src="<%-locals.userBaseInfo.resHost%>default/javascripts/common/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="<%-locals.userBaseInfo.resHost%>default/javascripts/common/sea.js"></script>
+<%-contentFor('centerContent')%>
+<div class="app-content">
+    <div class="app-ct">
+        <dl class="app-placard-edit m-t20 cl000">
+            <dt class="placard-edit-tt lt">分类选择</dt>
+            <dd>
+                <select class="placard-edit-txt"></select>
+            </dd>
+            <dt class="placard-edit-tt lt">发布类型</dt>
+            <dd>
+                <label class="placard-edit-radio"><input type="radio" name="edit-type" />即时发布</label>
+                <label class="placard-edit-radio"><input type="radio" name="edit-type" />定时发布</label>
+                <input class="placard-edit-txt m-r10" style="width: 410px;" type="text"><input class="placard-edit-txt" style="width: 410px;" type="text">
+            </dd>
+            <dt class="placard-edit-tt lt">图片</dt>
+            <dd>
+                <div class="placard-edit-upfile">
+                    <span class="btn-blue96x32 lt m-r10">上传</span>
+                    <p class="fz14-weight cl000">140*140 效果最佳</p>
+                    <p class="placard-upfile-tps">最多上传六张图片，支持.jpg，.png，.jpeg格式  大小：800K</p>
+                </div>
+                <ul class="placard-files-ul hide oflow">
+                    <li>
+                        <p class="placard-file-bd"><img src="http://hvming.i8xiaoshi.com/resource/default/special/images/common/logo.png" /></p>
+                        <span class="spbg1 sprite-65"></span>
+                        <p class="placard-files-name">产品委员会图片.png</p>
+                    </li>
+                    <li>
+                        <p class="placard-file-bd"><img src="http://hvming.i8xiaoshi.com/resource/default/special/images/common/logo.png" /></p>
+                        <span class="spbg1 sprite-65"></span>
+                        <p class="placard-files-name">产品委员会图片.png</p>
+                    </li>
+                    <li>
+                        <p class="placard-file-bd"><img src="http://hvming.i8xiaoshi.com/resource/default/special/images/common/logo.png" /></p>
+                        <span class="spbg1 sprite-65"></span>
+                        <p class="placard-files-name">产品委员会图片.png</p>
+                    </li>
+                    <li>
+                        <p class="placard-file-bd"><img src="http://hvming.i8xiaoshi.com/resource/default/special/images/common/logo.png" /></p>
+                        <span class="spbg1 sprite-65"></span>
+                        <p class="placard-files-name">产品委员会图片.png</p>
+                    </li>
+                    <li>
+                        <p class="placard-file-bd"><img src="http://hvming.i8xiaoshi.com/resource/default/special/images/common/logo.png" /></p>
+                        <span class="spbg1 sprite-65"></span>
+                        <p class="placard-files-name">产品委员会图片.png</p>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="app-placard-edit m-t20 cl000">
+            <dt class="placard-edit-tt lt">主题</dt>
+            <dd>
+                <select class="placard-edit-txt"></select>
+            </dd>
+            <dt class="placard-edit-tt lt">内容</dt>
+            <dd>
+                <textarea class="placard-edit-txt"></textarea>
+            </dd>
+        </dl>
+        <div class="tcenter">
+            <span class="placard-have-btn">保存使用</span>
+            <span class="placard-cancel-btn">取消</span>
+        </div>
+    </div>
+
+</div>
+<%-contentFor('footerContent')%>
+<script>
+    seajs.use('/default/javascripts/cement/addedit.js');
+</script>
